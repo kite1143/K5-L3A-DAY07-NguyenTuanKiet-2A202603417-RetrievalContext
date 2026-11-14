@@ -33,3 +33,11 @@ Chưa chạy test: test chỉ chạy sau khi chốt cấu hình trên dev.
 | `agent-dev-c3/` | như C2 + block cap 1.400 | 1,53 | 2/15 | 34.818 | 0,0064 USD |
 
 Mỗi thư mục có `traces.json`, `cases.json`, `run_meta.json`, `agent_metrics.json`. Nhãn chấm tay ở `artifacts/day7/reviews/` (`dev-<mã>.md` là bảng chấm, `<mã>-reviews.json` là nhãn dùng cho agent_metrics).
+## Bước 6 — test (7 câu, đã đóng băng)
+
+| Thư mục | Cấu hình | Grounded TB | Citation | Từ chối nhầm |
+|---|---|---:|---:|---:|
+| `agent-test-b0/` | baseline: hybrid, 2 lượt, budget 4.000 | 1,00 | 1/6 | 2/5 |
+| `agent-test-c2/` | **chọn**: hybrid, 3 lượt, budget 6.000 | **1,40** | 3/6 | 1/5 |
+
+Nhãn: `artifacts/day7/reviews/test-b0*.json`, `test-c2*.json`; bảng chấm tay: `test-b0.md`, `test-c2.md`.

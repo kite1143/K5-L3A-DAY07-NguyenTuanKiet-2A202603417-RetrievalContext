@@ -64,3 +64,23 @@ artifacts/day7/
   index_manifest.json      model, số chiều, thời gian, chi phí
   results/dev-*/           summary.json, traces.json, run_config.json
 ```
+## Bước 5–6 — thử cấu hình, chốt và chạy test
+
+```powershell
+# so sánh cấu hình trên dev (mỗi lệnh một thư mục riêng)
+python src/run_agent.py --split dev  --include-abstain --max-searches 3 --context-budget 6000 --out artifacts/day7/results/agent-dev-c2
+
+# sinh bảng chấm tay rồi chấm
+python src/review_sheet.py --run artifacts/day7/results/agent-dev-c2 --out artifacts/day7/reviews/dev-c2.md
+
+# tổng hợp nhãn đã chấm
+python starter/agent_metrics.py --cases artifacts/day7/results/agent-dev-c2/cases.json `
+  --traces artifacts/day7/results/agent-dev-c2/traces.json `
+  --reviews artifacts/day7/reviews/c2-reviews.json --split dev `
+  --output artifacts/day7/results/agent-dev-c2/agent_metrics.json
+
+# sau khi chốt mới chạy test
+python src/run_agent.py --split test --include-abstain --max-searches 3 --context-budget 6000 --out artifacts/day7/results/agent-test-c2
+```
+
+Tiêu chí chọn ghi trước ở [docs/STEP5_PROTOCOL.md](../docs/STEP5_PROTOCOL.md); kết quả dev ở [docs/STEP5_RESULTS.md](../docs/STEP5_RESULTS.md); kết quả test ở [docs/STEP6_RESULTS.md](../docs/STEP6_RESULTS.md).
