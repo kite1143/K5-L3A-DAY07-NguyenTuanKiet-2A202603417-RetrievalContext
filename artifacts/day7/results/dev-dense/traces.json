@@ -1,0 +1,755 @@
+[
+  {
+    "query_id": "q01",
+    "split": "dev",
+    "type": "direct",
+    "question": "According to Cephalus, what does justice consist in?",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 6,
+        "evidence": "to speak the truth and to pay your debts—no more than this?",
+        "unit_id": "rep-b1-u006"
+      }
+    ],
+    "top_k": 3,
+    "results": [
+      {
+        "rank": 1,
+        "id": "rep-b2-u012",
+        "page": 49,
+        "score": 0.737148,
+        "hit": false
+      },
+      {
+        "rank": 2,
+        "id": "rep-b1-u006",
+        "page": 6,
+        "score": 0.736768,
+        "hit": true
+      },
+      {
+        "rank": 3,
+        "id": "rep-b1-u017",
+        "page": 17,
+        "score": 0.723336,
+        "hit": false
+      }
+    ],
+    "hit1": false,
+    "hit3": true,
+    "context": "[rep-b2-u012 | plato-republic-1497 | page 49]\nVery true, said Adeimantus; but how does the illustration apply to our enquiry?\n\nI will tell you, I replied; justice, which is the subject of our enquiry, is, as you know, sometimes spoken of as the virtue of an individual, and sometimes as the virtue of a State.\n\nTrue, he replied.\n\nAnd is not a State larger than an individual?\n\nIt is.\n\nThen in the larger the quantity of justice is likely to be larger and more easily discernible. I propose therefore that we enquire into the nature of justice and injustice, first as they appear in the State, and secondly in the individual, proceeding from the greater to the lesser and comparing them.\n\nThat, he said, is an excellent proposal.\n\nAnd if we imagine the State in process of creation, we shall see the justice and injustice of the State in process of creation also.\n\nI dare say.\n\nWhen the State is completed there may be a hope that the object of our search will be more easily discovered.\n\nYes, far more easily.\n\nBut ought we to attempt to construct one? I said; for to do so, as I am inclined to think, will be a very serious task. Reflect therefore.\n\nI have reflected, said Adeimantus, and am anxious that you should proceed.\n\nA State, I said, arises, as I conceive, out of the needs of mankind; no one is self-sufficing, but all of us have many wants. Can any other origin of a State be imagined?\n\nThere can be no other.\n\nThen, as we have many wants, and many persons are needed to supply them, one takes a helper for one purpose and another for another; and when these partners and helpers are gathered together in one habitation the body of inhabitants is termed a State.\n\n[rep-b1-u006 | plato-republic-1497 | page 6]\nWell said, Cephalus, I replied; but as concerning justice, what is it?—to speak the truth and to pay your debts—no more than this? And even to this are there not exceptions? Suppose that a friend when in his right mind has deposited arms with me and he asks for them when he is not in his right mind, ought I to give them back to him? No one would say that I ought or that I should be right in doing so, any more than they would say that I ought always to speak the truth to one who is in his condition.\n\nYou are quite right, he replied.\n\nBut then, I said, speaking the truth and paying your debts is not a correct definition of justice.\n\nQuite correct, Socrates, if Simonides is to be believed, said Polemarchus interposing.\n\nI fear, said Cephalus, that I must go now, for I have to look after the sacrifices, and I hand over the argument to Polemarchus and the company.\n\nIs not Polemarchus your heir? I said.\n\nTo be sure, he answered, and went away laughing to the sacrifices.\n\nTell me then, O thou heir of the argument, what did Simonides say, and according to you truly say, about justice?\n\nHe said that the repayment of a debt is just, and in saying so he appears to me to be right.\n\nI should be sorry to doubt the word of such a wise and inspired man, but his meaning, though probably clear to you, is the reverse of clear to me. For he certainly does not mean, as we were just now saying, that I ought to return a deposit of arms or of anything else to one who asks for it when he is not in his right senses; and yet a deposit cannot be denied to be a debt.",
+    "context_ids": [
+      "rep-b2-u012",
+      "rep-b1-u006"
+    ],
+    "context_chars": 3285,
+    "context_budget": 4000,
+    "context_hit": true,
+    "elapsed_ms": 30.07360000628978
+  },
+  {
+    "query_id": "q02",
+    "split": "dev",
+    "type": "condition_exception",
+    "question": "Does Socrates accept that one should always return what one has borrowed? Explain using his example of the weapons.",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 6,
+        "evidence": "Suppose that a friend when in his right mind has deposited arms with me and he asks for them when he is not in his right mind, ought I to give them back to him?",
+        "unit_id": "rep-b1-u006"
+      }
+    ],
+    "top_k": 3,
+    "results": [
+      {
+        "rank": 1,
+        "id": "rep-b1-u007",
+        "page": 7,
+        "score": 0.828934,
+        "hit": false
+      },
+      {
+        "rank": 2,
+        "id": "rep-b1-u006",
+        "page": 6,
+        "score": 0.76683,
+        "hit": true
+      },
+      {
+        "rank": 3,
+        "id": "rep-b1-u009",
+        "page": 9,
+        "score": 0.739192,
+        "hit": false
+      }
+    ],
+    "hit1": false,
+    "hit3": true,
+    "context": "[rep-b1-u007 | plato-republic-1497 | page 7]\nTrue.\n\nThen when the person who asks me is not in his right mind I am by no means to make the return?\n\nCertainly not.\n\nWhen Simonides said that the repayment of a debt was justice, he did not mean to include that case?\n\nCertainly not; for he thinks that a friend ought always to do good to a friend and never evil.\n\nYou mean that the return of a deposit of gold which is to the injury of the receiver, if the two parties are friends, is not the repayment of a debt,—that is what you would imagine him to say?\n\nYes.\n\nAnd are enemies also to receive what we owe to them?\n\nTo be sure, he said, they are to receive what we owe them, and an enemy, as I take it, owes to an enemy that which is due or proper to him—that is to say, evil.\n\nSimonides, then, after the manner of poets, would seem to have spoken darkly of the nature of justice; for he really meant to say that justice is the giving to each man what is proper to him, and this he termed a debt.\n\nThat must have been his meaning, he said.\n\nBy heaven! I replied; and if we asked him what due or proper thing is given by medicine, and to whom, what answer do you think that he would make to us?\n\nHe would surely reply that medicine gives drugs and meat and drink to human bodies.\n\nAnd what due or proper thing is given by cookery, and to what?\n\nSeasoning to food.\n\nAnd what is that which justice gives, and to whom?\n\nIf, Socrates, we are to be guided at all by the analogy of the preceding instances, then justice is the art which gives good to friends and evil to enemies.\n\n[rep-b1-u006 | plato-republic-1497 | page 6]\nWell said, Cephalus, I replied; but as concerning justice, what is it?—to speak the truth and to pay your debts—no more than this? And even to this are there not exceptions? Suppose that a friend when in his right mind has deposited arms with me and he asks for them when he is not in his right mind, ought I to give them back to him? No one would say that I ought or that I should be right in doing so, any more than they would say that I ought always to speak the truth to one who is in his condition.\n\nYou are quite right, he replied.\n\nBut then, I said, speaking the truth and paying your debts is not a correct definition of justice.\n\nQuite correct, Socrates, if Simonides is to be believed, said Polemarchus interposing.\n\nI fear, said Cephalus, that I must go now, for I have to look after the sacrifices, and I hand over the argument to Polemarchus and the company.\n\nIs not Polemarchus your heir? I said.\n\nTo be sure, he answered, and went away laughing to the sacrifices.\n\nTell me then, O thou heir of the argument, what did Simonides say, and according to you truly say, about justice?\n\nHe said that the repayment of a debt is just, and in saying so he appears to me to be right.\n\nI should be sorry to doubt the word of such a wise and inspired man, but his meaning, though probably clear to you, is the reverse of clear to me. For he certainly does not mean, as we were just now saying, that I ought to return a deposit of arms or of anything else to one who asks for it when he is not in his right senses; and yet a deposit cannot be denied to be a debt.",
+    "context_ids": [
+      "rep-b1-u007",
+      "rep-b1-u006"
+    ],
+    "context_chars": 3182,
+    "context_budget": 4000,
+    "context_hit": true,
+    "elapsed_ms": 16.049800004111603
+  },
+  {
+    "query_id": "q03",
+    "split": "dev",
+    "type": "direct",
+    "question": "What definition of justice does Thrasymachus announce?",
+    "filter": {
+      "book": 1
+    },
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 16,
+        "evidence": "I proclaim that justice is nothing else than the interest of the stronger.",
+        "unit_id": "rep-b1-u016"
+      }
+    ],
+    "top_k": 3,
+    "results": [
+      {
+        "rank": 1,
+        "id": "rep-b1-u024",
+        "page": 24,
+        "score": 0.744473,
+        "hit": false
+      },
+      {
+        "rank": 2,
+        "id": "rep-b1-u023",
+        "page": 23,
+        "score": 0.691724,
+        "hit": false
+      },
+      {
+        "rank": 3,
+        "id": "rep-b1-u033",
+        "page": 33,
+        "score": 0.686418,
+        "hit": false
+      }
+    ],
+    "hit1": false,
+    "hit3": false,
+    "context": "[rep-b1-u024 | plato-republic-1497 | page 24]\nThrasymachus, when he had thus spoken, having, like a bath-man, deluged our ears with his words, had a mind to go away. But the company would not let him; they insisted that he should remain and defend his position; and I myself added my own humble request that he would not leave us. Thrasymachus, I said to him, excellent man, how suggestive are your remarks! And are you going to run away before you have fairly taught or learned whether they are true or not? Is the attempt to determine the way of man’s life so small a matter in your eyes—to determine how life may be passed by each one of us to the greatest advantage?\n\nAnd do I differ from you, he said, as to the importance of the enquiry?\n\nYou appear rather, I replied, to have no care or thought about us, Thrasymachus—whether we live better or worse from not knowing what you say you know, is to you a matter of indifference. Prithee, friend, do not keep your knowledge to yourself; we are a large party; and any benefit which you confer upon us will be amply rewarded. For my own part I openly declare that I am not convinced, and that I do not believe injustice to be more gainful than justice, even if uncontrolled and allowed to have free play. For, granting that there may be an unjust man who is able to commit injustice either by fraud or force, still this does not convince me of the superior advantage of injustice, and there may be others who are in the same predicament with myself. Perhaps we may be wrong; if so, you in your wisdom should convince us that we are mistaken in preferring justice to injustice.\n\n[rep-b1-u033 | plato-republic-1497 | page 33]\nNothing in the world, I said; and if you are so disposed I will ask and you shall answer.\n\nProceed.\n\nThen I will repeat the question which I asked before, in order that our examination of the relative nature of justice and injustice may be carried on regularly. A statement was made that injustice is stronger and more powerful than justice, but now justice, having been identified with wisdom and virtue, is easily shown to be stronger than injustice, if injustice is ignorance; this can no longer be questioned by any one. But I want to view the matter, Thrasymachus, in a different way: You would not deny that a state may be unjust and may be unjustly attempting to enslave other states, or may have already enslaved them, and may be holding many of them in subjection?\n\nTrue, he replied; and I will add that the best and most perfectly unjust state will be most likely to do so.\n\nI know, I said, that such was your position; but what I would further consider is, whether this power which is possessed by the superior state can exist or be exercised without justice or only with justice.\n\nIf you are right in your view, and justice is wisdom, then only with justice; but if I am right, then without justice.\n\nI am delighted, Thrasymachus, to see you not only nodding assent and dissent, but making answers which are quite excellent.\n\nThat is out of civility to you, he replied.\n\nYou are very kind, I said; and would you have the goodness also to inform me, whether you think that a state, or an army, or a band of robbers and thieves, or any other gang of evil-doers could act at all if they injured one another?",
+    "context_ids": [
+      "rep-b1-u024",
+      "rep-b1-u033"
+    ],
+    "context_chars": 3291,
+    "context_budget": 4000,
+    "context_hit": false,
+    "elapsed_ms": 13.498300017090514
+  },
+  {
+    "query_id": "q05",
+    "split": "dev",
+    "type": "direct",
+    "question": "What does Thrasymachus claim about the relative fortunes of the just and unjust man?",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 23,
+        "evidence": "the just is always a loser in comparison with the unjust",
+        "unit_id": "rep-b1-u023"
+      }
+    ],
+    "top_k": 3,
+    "results": [
+      {
+        "rank": 1,
+        "id": "rep-b1-u032",
+        "page": 32,
+        "score": 0.771669,
+        "hit": false
+      },
+      {
+        "rank": 2,
+        "id": "rep-b1-u023",
+        "page": 23,
+        "score": 0.754949,
+        "hit": true
+      },
+      {
+        "rank": 3,
+        "id": "rep-b1-u024",
+        "page": 24,
+        "score": 0.747049,
+        "hit": false
+      }
+    ],
+    "hit1": false,
+    "hit3": true,
+    "context": "[rep-b1-u032 | plato-republic-1497 | page 32]\nI suppose so.\n\nWhereas the bad and ignorant will desire to gain more than both?\n\nYes.\n\nBut did we not say, Thrasymachus, that the unjust goes beyond both his like and unlike? Were not these your words?\n\nThey were.\n\nAnd you also said that the just will not go beyond his like but his unlike?\n\nYes.\n\nThen the just is like the wise and good, and the unjust like the evil and ignorant?\n\nThat is the inference.\n\nAnd each of them is such as his like is?\n\nThat was admitted.\n\nThen the just has turned out to be wise and good and the unjust evil and ignorant.\n\nThrasymachus made all these admissions, not fluently, as I repeat them, but with extreme reluctance; it was a hot summer’s day, and the perspiration poured from him in torrents; and then I saw what I had never seen before, Thrasymachus blushing. As we were now agreed that justice was virtue and wisdom, and injustice vice and ignorance, I proceeded to another point:\n\nWell, I said, Thrasymachus, that matter is now settled; but were we not also saying that injustice had strength; do you remember?\n\nYes, I remember, he said, but do not suppose that I approve of what you are saying or have no answer; if however I were to answer, you would be quite certain to accuse me of haranguing; therefore either permit me to have my say out, or if you would rather ask, do so, and I will answer ‘Very good,’ as they say to story-telling old women, and will nod ‘Yes’ and ‘No.’\n\nCertainly not, I said, if contrary to your real opinion.\n\nYes, he said, I will, to please you, since you will not let me speak. What else would you have?\n\n[rep-b1-u024 | plato-republic-1497 | page 24]\nThrasymachus, when he had thus spoken, having, like a bath-man, deluged our ears with his words, had a mind to go away. But the company would not let him; they insisted that he should remain and defend his position; and I myself added my own humble request that he would not leave us. Thrasymachus, I said to him, excellent man, how suggestive are your remarks! And are you going to run away before you have fairly taught or learned whether they are true or not? Is the attempt to determine the way of man’s life so small a matter in your eyes—to determine how life may be passed by each one of us to the greatest advantage?\n\nAnd do I differ from you, he said, as to the importance of the enquiry?\n\nYou appear rather, I replied, to have no care or thought about us, Thrasymachus—whether we live better or worse from not knowing what you say you know, is to you a matter of indifference. Prithee, friend, do not keep your knowledge to yourself; we are a large party; and any benefit which you confer upon us will be amply rewarded. For my own part I openly declare that I am not convinced, and that I do not believe injustice to be more gainful than justice, even if uncontrolled and allowed to have free play. For, granting that there may be an unjust man who is able to commit injustice either by fraud or force, still this does not convince me of the superior advantage of injustice, and there may be others who are in the same predicament with myself. Perhaps we may be wrong; if so, you in your wisdom should convince us that we are mistaken in preferring justice to injustice.",
+    "context_ids": [
+      "rep-b1-u032",
+      "rep-b1-u024"
+    ],
+    "context_chars": 3250,
+    "context_budget": 4000,
+    "context_hit": false,
+    "elapsed_ms": 15.204499999526888
+  },
+  {
+    "query_id": "q06",
+    "split": "dev",
+    "type": "direct",
+    "question": "In which class of goods does Socrates place justice, and why?",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 38,
+        "evidence": "In the highest class, I replied,—among those goods which he who would be happy desires both for their own sake and for the sake of their results.",
+        "unit_id": "rep-b2-u001"
+      }
+    ],
+    "top_k": 3,
+    "results": [
+      {
+        "rank": 1,
+        "id": "rep-b2-u001",
+        "page": 38,
+        "score": 0.756691,
+        "hit": true
+      },
+      {
+        "rank": 2,
+        "id": "rep-b2-u010",
+        "page": 47,
+        "score": 0.745675,
+        "hit": false
+      },
+      {
+        "rank": 3,
+        "id": "rep-b1-u010",
+        "page": 10,
+        "score": 0.722394,
+        "hit": false
+      }
+    ],
+    "hit1": true,
+    "hit3": true,
+    "context": "[rep-b2-u001 | plato-republic-1497 | page 38]\nWith these words I was thinking that I had made an end of the discussion; but the end, in truth, proved to be only a beginning. For Glaucon, who is always the most pugnacious of men, was dissatisfied at Thrasymachus’ retirement; he wanted to have the battle out. So he said to me: Socrates, do you wish really to persuade us, or only to seem to have persuaded us, that to be just is always better than to be unjust?\n\nI should wish really to persuade you, I replied, if I could.\n\nThen you certainly have not succeeded. Let me ask you now:—How would you arrange goods—are there not some which we welcome for their own sakes, and independently of their consequences, as, for example, harmless pleasures and enjoyments, which delight us at the time, although nothing follows from them?\n\nI agree in thinking that there is such a class, I replied.\n\nIs there not also a second class of goods, such as knowledge, sight, health, which are desirable not only in themselves, but also for their results?\n\nCertainly, I said.\n\nAnd would you not recognize a third class, such as gymnastic, and the care of the sick, and the physician’s art; also the various ways of money-making—these do us good but we regard them as disagreeable; and no one would choose them for their own sakes, but only for the sake of some reward or result which flows from them?\n\nThere is, I said, this third class also. But why do you ask?\n\nBecause I want to know in which of the three classes you would place justice?\n\nIn the highest class, I replied,—among those goods which he who would be happy desires both for their own sake and for the sake of their results.\n\n[rep-b1-u010 | plato-republic-1497 | page 10]\n‘He was excellent above all men in theft and perjury.’\n\nAnd so, you and Homer and Simonides are agreed that justice is an art of theft; to be practised however ‘for the good of friends and for the harm of enemies,’—that was what you were saying?\n\nNo, certainly not that, though I do not now know what I did say; but I still stand by the latter words.\n\nWell, there is another question: By friends and enemies do we mean those who are so really, or only in seeming?\n\nSurely, he said, a man may be expected to love those whom he thinks good, and to hate those whom he thinks evil.\n\nYes, but do not persons often err about good and evil: many who are not good seem to be so, and conversely?\n\nThat is true.\n\nThen to them the good will be enemies and the evil will be their friends? True.\n\nAnd in that case they will be right in doing good to the evil and evil to the good?\n\nClearly.\n\nBut the good are just and would not do an injustice?\n\nTrue.\n\nThen according to your argument it is just to injure those who do no wrong?\n\nNay, Socrates; the doctrine is immoral.\n\nThen I suppose that we ought to do good to the just and harm to the unjust?\n\nI like that better.\n\nBut see the consequence:—Many a man who is ignorant of human nature has friends who are bad friends, and in that case he ought to do harm to them; and he has good enemies whom he ought to benefit; but, if so, we shall be saying the very opposite of that which we affirmed to be the meaning of Simonides.\n\nVery true, he said: and I think that we had better correct an error into which we seem to have fallen in the use of the words ‘friend’ and ‘enemy.’",
+    "context_ids": [
+      "rep-b2-u001",
+      "rep-b1-u010"
+    ],
+    "context_chars": 3326,
+    "context_budget": 4000,
+    "context_hit": true,
+    "elapsed_ms": 12.993299984373152
+  },
+  {
+    "query_id": "q08",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "What conclusion does Glaucon draw from the ring of Gyges about human justice?",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 40,
+        "evidence": "no man can be imagined to be of such an iron nature that he would stand fast in justice",
+        "unit_id": "rep-b2-u003"
+      }
+    ],
+    "top_k": 3,
+    "results": [
+      {
+        "rank": 1,
+        "id": "rep-b2-u006",
+        "page": 43,
+        "score": 0.740852,
+        "hit": false
+      },
+      {
+        "rank": 2,
+        "id": "rep-b2-u003",
+        "page": 40,
+        "score": 0.714921,
+        "hit": true
+      },
+      {
+        "rank": 3,
+        "id": "rep-b2-u011",
+        "page": 48,
+        "score": 0.681577,
+        "hit": false
+      }
+    ],
+    "hit1": false,
+    "hit3": true,
+    "context": "[rep-b2-u006 | plato-republic-1497 | page 43]\nI was going to say something in answer to Glaucon, when Adeimantus, his brother, interposed: Socrates, he said, you do not suppose that there is nothing more to be urged?\n\nWhy, what else is there? I answered.\n\nThe strongest point of all has not been even mentioned, he replied.\n\nWell, then, according to the proverb, ‘Let brother help brother’—if he fails in any part do you assist him; although I must confess that Glaucon has already said quite enough to lay me in the dust, and take from me the power of helping justice.\n\nNonsense, he replied. But let me add something more: There is another side to Glaucon’s argument about the praise and censure of justice and injustice, which is equally required in order to bring out what I believe to be his meaning. Parents and tutors are always telling their sons and their wards that they are to be just; but why? not for the sake of justice, but for the sake of character and reputation; in the hope of obtaining for him who is reputed just some of those offices, marriages, and the like which Glaucon has enumerated among the advantages accruing to the unjust from the reputation of justice. More, however, is made of appearances by this class of persons than by the others; for they throw in the good opinion of the gods, and will tell you of a shower of benefits which the heavens, as they say, rain upon the pious; and this accords with the testimony of the noble Hesiod and Homer, the first of whom says, that the gods make the oaks of the just—\n\n‘To bear acorns at their summit, and bees in the middle; And the sheep are bowed down with the weight of their fleeces,’\n\n[rep-b2-u011 | plato-republic-1497 | page 48]\nI had always admired the genius of Glaucon and Adeimantus, but on hearing these words I was quite delighted, and said: Sons of an illustrious father, that was not a bad beginning of the Elegiac verses which the admirer of Glaucon made in honour of you after you had distinguished yourselves at the battle of Megara:—\n\n‘Sons of Ariston,’ he sang, ‘divine offspring of an illustrious hero.’\n\nThe epithet is very appropriate, for there is something truly divine in being able to argue as you have done for the superiority of injustice, and remaining unconvinced by your own arguments. And I do believe that you are not convinced—this I infer from your general character, for had I judged only from your speeches I should have mistrusted you. But now, the greater my confidence in you, the greater is my difficulty in knowing what to say. For I am in a strait between two; on the one hand I feel that I am unequal to the task; and my inability is brought home to me by the fact that you were not satisfied with the answer which I made to Thrasymachus, proving, as I thought, the superiority which justice has over injustice. And yet I cannot refuse to help, while breath and speech remain to me; I am afraid that there would be an impiety in being present when justice is evil spoken of and not lifting up a hand in her defence. And therefore I had best give such help as I can.\n\nGlaucon and the rest entreated me by all means not to let the question drop, but to proceed in the investigation. They wanted to arrive at the truth, first, about the nature of justice and injustice, and secondly, about their relative advantages. I told them, what I really thought, that the enquiry would be of a serious nature, and would require very good eyes. Seeing then, I said, that we are no great wits, I think that we had better adopt a method which I may illustrate thus; suppose that a short-sighted person had been asked by some one to read small letters from a distance; and it occurred to some one else that they might be found in another place which was larger and in which the letters were larger—if they were the same and he could read the larger letters first, and then proceed to the lesser—this would have been thought a rare piece of good fortune.",
+    "context_ids": [
+      "rep-b2-u006",
+      "rep-b2-u011"
+    ],
+    "context_chars": 3957,
+    "context_budget": 4000,
+    "context_hit": false,
+    "elapsed_ms": 16.120999993290752
+  },
+  {
+    "query_id": "q09",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "Why does Glaucon object to Socrates's simple city as a 'city of pigs'?",
+    "filter": {
+      "book": 2
+    },
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 54,
+        "evidence": "Yes, Socrates, he said, and if you were providing for a city of pigs, how else would you feed the beasts?\n\nBut what would you have, Glaucon? I replied.\n\nWhy, he said, you should give them the ordinary conveniences of life. People who are to be comfortable are accustomed to lie on sofas, and dine off tables, and they should have sauces and sweets in the modern style.",
+        "unit_id": "rep-b2-u017"
+      }
+    ],
+    "top_k": 3,
+    "results": [
+      {
+        "rank": 1,
+        "id": "rep-b2-u006",
+        "page": 43,
+        "score": 0.748213,
+        "hit": false
+      },
+      {
+        "rank": 2,
+        "id": "rep-b2-u001",
+        "page": 38,
+        "score": 0.697743,
+        "hit": false
+      },
+      {
+        "rank": 3,
+        "id": "rep-b2-u005",
+        "page": 42,
+        "score": 0.696526,
+        "hit": false
+      }
+    ],
+    "hit1": false,
+    "hit3": false,
+    "context": "[rep-b2-u006 | plato-republic-1497 | page 43]\nI was going to say something in answer to Glaucon, when Adeimantus, his brother, interposed: Socrates, he said, you do not suppose that there is nothing more to be urged?\n\nWhy, what else is there? I answered.\n\nThe strongest point of all has not been even mentioned, he replied.\n\nWell, then, according to the proverb, ‘Let brother help brother’—if he fails in any part do you assist him; although I must confess that Glaucon has already said quite enough to lay me in the dust, and take from me the power of helping justice.\n\nNonsense, he replied. But let me add something more: There is another side to Glaucon’s argument about the praise and censure of justice and injustice, which is equally required in order to bring out what I believe to be his meaning. Parents and tutors are always telling their sons and their wards that they are to be just; but why? not for the sake of justice, but for the sake of character and reputation; in the hope of obtaining for him who is reputed just some of those offices, marriages, and the like which Glaucon has enumerated among the advantages accruing to the unjust from the reputation of justice. More, however, is made of appearances by this class of persons than by the others; for they throw in the good opinion of the gods, and will tell you of a shower of benefits which the heavens, as they say, rain upon the pious; and this accords with the testimony of the noble Hesiod and Homer, the first of whom says, that the gods make the oaks of the just—\n\n‘To bear acorns at their summit, and bees in the middle; And the sheep are bowed down with the weight of their fleeces,’\n\n[rep-b2-u001 | plato-republic-1497 | page 38]\nWith these words I was thinking that I had made an end of the discussion; but the end, in truth, proved to be only a beginning. For Glaucon, who is always the most pugnacious of men, was dissatisfied at Thrasymachus’ retirement; he wanted to have the battle out. So he said to me: Socrates, do you wish really to persuade us, or only to seem to have persuaded us, that to be just is always better than to be unjust?\n\nI should wish really to persuade you, I replied, if I could.\n\nThen you certainly have not succeeded. Let me ask you now:—How would you arrange goods—are there not some which we welcome for their own sakes, and independently of their consequences, as, for example, harmless pleasures and enjoyments, which delight us at the time, although nothing follows from them?\n\nI agree in thinking that there is such a class, I replied.\n\nIs there not also a second class of goods, such as knowledge, sight, health, which are desirable not only in themselves, but also for their results?\n\nCertainly, I said.\n\nAnd would you not recognize a third class, such as gymnastic, and the care of the sick, and the physician’s art; also the various ways of money-making—these do us good but we regard them as disagreeable; and no one would choose them for their own sakes, but only for the sake of some reward or result which flows from them?\n\nThere is, I said, this third class also. But why do you ask?\n\nBecause I want to know in which of the three classes you would place justice?\n\nIn the highest class, I replied,—among those goods which he who would be happy desires both for their own sake and for the sake of their results.",
+    "context_ids": [
+      "rep-b2-u006",
+      "rep-b2-u001"
+    ],
+    "context_chars": 3336,
+    "context_budget": 4000,
+    "context_hit": false,
+    "elapsed_ms": 16.752900002757087
+  },
+  {
+    "query_id": "q11",
+    "split": "dev",
+    "type": "direct",
+    "question": "What is the first measure Socrates proposes for controlling the stories told to future guardians?",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 61,
+        "evidence": "Then the first thing will be to establish a censorship of the writers of fiction, and let the censors receive any tale of fiction which is good, and reject the bad",
+        "unit_id": "rep-b2-u024"
+      }
+    ],
+    "top_k": 3,
+    "results": [
+      {
+        "rank": 1,
+        "id": "rep-b2-u010",
+        "page": 47,
+        "score": 0.677351,
+        "hit": false
+      },
+      {
+        "rank": 2,
+        "id": "rep-b3-u037",
+        "page": 105,
+        "score": 0.66997,
+        "hit": false
+      },
+      {
+        "rank": 3,
+        "id": "rep-b2-u005",
+        "page": 42,
+        "score": 0.66366,
+        "hit": false
+      }
+    ],
+    "hit1": false,
+    "hit3": false,
+    "context": "[rep-b3-u037 | plato-republic-1497 | page 105]\nThat appears to be the intention.\n\nAnd he who mingles music with gymnastic in the fairest proportions, and best attempers them to the soul, may be rightly called the true musician and harmonist in a far higher sense than the tuner of the strings.\n\nYou are quite right, Socrates.\n\nAnd such a presiding genius will be always required in our State if the government is to last.\n\nYes, he will be absolutely necessary.\n\nSuch, then, are our principles of nurture and education: Where would be the use of going into further details about the dances of our citizens, or about their hunting and coursing, their gymnastic and equestrian contests? For these all follow the general principle, and having found that, we shall have no difficulty in discovering them.\n\nI dare say that there will be no difficulty.\n\nVery good, I said; then what is the next question? Must we not ask who are to be rulers and who subjects?\n\nCertainly.\n\nThere can be no doubt that the elder must rule the younger.\n\nClearly.\n\nAnd that the best of these must rule.\n\nThat is also clear.\n\nNow, are not the best husbandmen those who are most devoted to husbandry?\n\nYes.\n\nAnd as we are to have the best of guardians for our city, must they not be those who have most the character of guardians?\n\nYes.\n\nAnd to this end they ought to be wise and efficient, and to have a special care of the State?\n\nTrue.\n\nAnd a man will be most likely to care about that which he loves?\n\nTo be sure.\n\nAnd he will be most likely to love that which he regards as having the same interests with himself, and that of which the good or evil fortune is supposed by him at any time most to affect his own?\n\n[rep-b2-u005 | plato-republic-1497 | page 42]\nHeavens! my dear Glaucon, I said, how energetically you polish them up for the decision, first one and then the other, as if they were two statues.\n\nI do my best, he said. And now that we know what they are like there is no difficulty in tracing out the sort of life which awaits either of them. This I will proceed to describe; but as you may think the description a little too coarse, I ask you to suppose, Socrates, that the words which follow are not mine.—Let me put them into the mouths of the eulogists of injustice: They will tell you that the just man who is thought unjust will be scourged, racked, bound—will have his eyes burnt out; and, at last, after suffering every kind of evil, he will be impaled: Then he will understand that he ought to seem only, and not to be, just; the words of Aeschylus may be more truly spoken of the unjust than of the just. For the unjust is pursuing a reality; he does not live with a view to appearances—he wants to be really unjust and not to seem only:—\n\n‘His mind has a soil deep and fertile, Out of which spring his prudent counsels.’\n\nIn the first place, he is thought just, and therefore bears rule in the city; he can marry whom he will, and give in marriage to whom he will; also he can trade and deal where he likes, and always to his own advantage, because he has no misgivings about injustice; and at every contest, whether in public or private, he gets the better of his antagonists, and gains at their expense, and is rich, and out of his gains he can benefit his friends, and harm his enemies; moreover, he can offer sacrifices, and dedicate gifts to the gods abundantly and magnificently, and can honour the gods or any man whom he wants to honour in a far better style than the just, and therefore he is likely to be dearer than they are to the gods. And thus, Socrates, gods and men are said to unite in making the life of the unjust better than the life of the just.",
+    "context_ids": [
+      "rep-b3-u037",
+      "rep-b2-u005"
+    ],
+    "context_chars": 3664,
+    "context_budget": 4000,
+    "context_hit": false,
+    "elapsed_ms": 13.227100018411875
+  },
+  {
+    "query_id": "q12",
+    "split": "dev",
+    "type": "direct",
+    "question": "What are the three parts of a song or ode, according to Socrates?",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 86,
+        "evidence": "a song or ode has three parts—the words, the melody, and the rhythm",
+        "unit_id": "rep-b3-u018"
+      }
+    ],
+    "top_k": 3,
+    "results": [
+      {
+        "rank": 1,
+        "id": "rep-b3-u018",
+        "page": 86,
+        "score": 0.74816,
+        "hit": true
+      },
+      {
+        "rank": 2,
+        "id": "rep-b3-u020",
+        "page": 88,
+        "score": 0.707845,
+        "hit": false
+      },
+      {
+        "rank": 3,
+        "id": "rep-b2-u001",
+        "page": 38,
+        "score": 0.681701,
+        "hit": false
+      }
+    ],
+    "hit1": true,
+    "hit3": true,
+    "context": "[rep-b3-u018 | plato-republic-1497 | page 86]\nAt any rate you can tell that a song or ode has three parts—the words, the melody, and the rhythm; that degree of knowledge I may presuppose?\n\nYes, he said; so much as that you may.\n\nAnd as for the words, there will surely be no difference between words which are and which are not set to music; both will conform to the same laws, and these have been already determined by us?\n\nYes.\n\nAnd the melody and rhythm will depend upon the words?\n\nCertainly.\n\nWe were saying, when we spoke of the subject-matter, that we had no need of lamentation and strains of sorrow?\n\nTrue.\n\nAnd which are the harmonies expressive of sorrow? You are musical, and can tell me.\n\nThe harmonies which you mean are the mixed or tenor Lydian, and the full-toned or bass Lydian, and such like.\n\nThese then, I said, must be banished; even to women who have a character to maintain they are of no use, and much less to men.\n\nCertainly.\n\nIn the next place, drunkenness and softness and indolence are utterly unbecoming the character of our guardians.\n\nUtterly unbecoming.\n\nAnd which are the soft or drinking harmonies?\n\nThe Ionian, he replied, and the Lydian; they are termed ‘relaxed.’\n\nWell, and are these of any military use?\n\nQuite the reverse, he replied; and if so the Dorian and the Phrygian are the only ones which you have left.\n\nI answered: Of the harmonies I know nothing, but I want to have one warlike, to sound the note or accent which a brave man utters in the hour of danger and stern resolve, or when his cause is failing, and he is going to wounds or death or is overtaken by some other evil, and at every such crisis meets the blows of fortune with firm step and a determination to endure; and another to be used by him in times of peace and freedom of action, when there is no pressure of necessity, and he is seeking to persuade God by prayer, or man by instruction and admonition, or on the other hand, when he is expressing his willingness to yield to persuasion or entreaty or admonition, and which represents him when by prudent conduct he has attained his end, not carried away by his success, but acting moderately and wisely under the circumstances, and acquiescing in the event. These two harmonies I ask you to leave; the strain of necessity and the strain of freedom, the strain of the unfortunate and the strain of the fortunate, the strain of courage, and the strain of temperance; these, I say, leave.",
+    "context_ids": [
+      "rep-b3-u018"
+    ],
+    "context_chars": 2450,
+    "context_budget": 4000,
+    "context_hit": true,
+    "elapsed_ms": 19.41040001111105
+  },
+  {
+    "query_id": "q13",
+    "split": "dev",
+    "type": "direct",
+    "question": "Which two harmonies does Glaucon say remain after the unsuitable harmonies are banished?",
+    "filter": {
+      "book": 3
+    },
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 86,
+        "evidence": "the Dorian and the Phrygian are the only ones which you have left.",
+        "unit_id": "rep-b3-u018"
+      }
+    ],
+    "top_k": 3,
+    "results": [
+      {
+        "rank": 1,
+        "id": "rep-b3-u018",
+        "page": 86,
+        "score": 0.740135,
+        "hit": true
+      },
+      {
+        "rank": 2,
+        "id": "rep-b3-u019",
+        "page": 87,
+        "score": 0.699852,
+        "hit": false
+      },
+      {
+        "rank": 3,
+        "id": "rep-b3-u016",
+        "page": 84,
+        "score": 0.696355,
+        "hit": false
+      }
+    ],
+    "hit1": true,
+    "hit3": true,
+    "context": "[rep-b3-u018 | plato-republic-1497 | page 86]\nAt any rate you can tell that a song or ode has three parts—the words, the melody, and the rhythm; that degree of knowledge I may presuppose?\n\nYes, he said; so much as that you may.\n\nAnd as for the words, there will surely be no difference between words which are and which are not set to music; both will conform to the same laws, and these have been already determined by us?\n\nYes.\n\nAnd the melody and rhythm will depend upon the words?\n\nCertainly.\n\nWe were saying, when we spoke of the subject-matter, that we had no need of lamentation and strains of sorrow?\n\nTrue.\n\nAnd which are the harmonies expressive of sorrow? You are musical, and can tell me.\n\nThe harmonies which you mean are the mixed or tenor Lydian, and the full-toned or bass Lydian, and such like.\n\nThese then, I said, must be banished; even to women who have a character to maintain they are of no use, and much less to men.\n\nCertainly.\n\nIn the next place, drunkenness and softness and indolence are utterly unbecoming the character of our guardians.\n\nUtterly unbecoming.\n\nAnd which are the soft or drinking harmonies?\n\nThe Ionian, he replied, and the Lydian; they are termed ‘relaxed.’\n\nWell, and are these of any military use?\n\nQuite the reverse, he replied; and if so the Dorian and the Phrygian are the only ones which you have left.\n\nI answered: Of the harmonies I know nothing, but I want to have one warlike, to sound the note or accent which a brave man utters in the hour of danger and stern resolve, or when his cause is failing, and he is going to wounds or death or is overtaken by some other evil, and at every such crisis meets the blows of fortune with firm step and a determination to endure; and another to be used by him in times of peace and freedom of action, when there is no pressure of necessity, and he is seeking to persuade God by prayer, or man by instruction and admonition, or on the other hand, when he is expressing his willingness to yield to persuasion or entreaty or admonition, and which represents him when by prudent conduct he has attained his end, not carried away by his success, but acting moderately and wisely under the circumstances, and acquiescing in the event. These two harmonies I ask you to leave; the strain of necessity and the strain of freedom, the strain of the unfortunate and the strain of the fortunate, the strain of courage, and the strain of temperance; these, I say, leave.",
+    "context_ids": [
+      "rep-b3-u018"
+    ],
+    "context_chars": 2450,
+    "context_budget": 4000,
+    "context_hit": true,
+    "elapsed_ms": 14.807400002609938
+  },
+  {
+    "query_id": "q15",
+    "split": "dev",
+    "type": "paraphrase",
+    "question": "Why does Socrates restrict what guardians may imitate?",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 81,
+        "evidence": "lest from imitation they should come to be what they imitate.",
+        "unit_id": "rep-b3-u013"
+      }
+    ],
+    "top_k": 3,
+    "results": [
+      {
+        "rank": 1,
+        "id": "rep-b3-u038",
+        "page": 106,
+        "score": 0.719434,
+        "hit": false
+      },
+      {
+        "rank": 2,
+        "id": "rep-b3-u037",
+        "page": 105,
+        "score": 0.716542,
+        "hit": false
+      },
+      {
+        "rank": 3,
+        "id": "rep-b2-u020",
+        "page": 57,
+        "score": 0.714757,
+        "hit": false
+      }
+    ],
+    "hit1": false,
+    "hit3": false,
+    "context": "[rep-b3-u038 | plato-republic-1497 | page 106]\nVery true, he replied.\n\nThen there must be a selection. Let us note among the guardians those who in their whole life show the greatest eagerness to do what is for the good of their country, and the greatest repugnance to do what is against her interests.\n\nThose are the right men.\n\nAnd they will have to be watched at every age, in order that we may see whether they preserve their resolution, and never, under the influence either of force or enchantment, forget or cast off their sense of duty to the State.\n\nHow cast off? he said.\n\nI will explain to you, I replied. A resolution may go out of a man’s mind either with his will or against his will; with his will when he gets rid of a falsehood and learns better, against his will whenever he is deprived of a truth.\n\nI understand, he said, the willing loss of a resolution; the meaning of the unwilling I have yet to learn.\n\nWhy, I said, do you not see that men are unwillingly deprived of good, and willingly of evil? Is not to have lost the truth an evil, and to possess the truth a good? and you would agree that to conceive things as they are is to possess the truth?\n\nYes, he replied; I agree with you in thinking that mankind are deprived of truth against their will.\n\nAnd is not this involuntary deprivation caused either by theft, or force, or enchantment?\n\nStill, he replied, I do not understand you.\n\nI fear that I must have been talking darkly, like the tragedians. I only mean that some men are changed by persuasion and that others forget; argument steals away the hearts of one class, and time of the other; and this I call theft. Now you understand me?\n\n[rep-b3-u037 | plato-republic-1497 | page 105]\nThat appears to be the intention.\n\nAnd he who mingles music with gymnastic in the fairest proportions, and best attempers them to the soul, may be rightly called the true musician and harmonist in a far higher sense than the tuner of the strings.\n\nYou are quite right, Socrates.\n\nAnd such a presiding genius will be always required in our State if the government is to last.\n\nYes, he will be absolutely necessary.\n\nSuch, then, are our principles of nurture and education: Where would be the use of going into further details about the dances of our citizens, or about their hunting and coursing, their gymnastic and equestrian contests? For these all follow the general principle, and having found that, we shall have no difficulty in discovering them.\n\nI dare say that there will be no difficulty.\n\nVery good, I said; then what is the next question? Must we not ask who are to be rulers and who subjects?\n\nCertainly.\n\nThere can be no doubt that the elder must rule the younger.\n\nClearly.\n\nAnd that the best of these must rule.\n\nThat is also clear.\n\nNow, are not the best husbandmen those who are most devoted to husbandry?\n\nYes.\n\nAnd as we are to have the best of guardians for our city, must they not be those who have most the character of guardians?\n\nYes.\n\nAnd to this end they ought to be wise and efficient, and to have a special care of the State?\n\nTrue.\n\nAnd a man will be most likely to care about that which he loves?\n\nTo be sure.\n\nAnd he will be most likely to love that which he regards as having the same interests with himself, and that of which the good or evil fortune is supposed by him at any time most to affect his own?",
+    "context_ids": [
+      "rep-b3-u038",
+      "rep-b3-u037"
+    ],
+    "context_chars": 3356,
+    "context_budget": 4000,
+    "context_hit": false,
+    "elapsed_ms": 11.13709999481216
+  },
+  {
+    "query_id": "q16",
+    "split": "dev",
+    "type": "direct",
+    "question": "What is the 'royal lie' or noble lie Socrates proposes about the citizens' origin?",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 108,
+        "evidence": "They are to be told that their youth was a dream, and the education and training which they received from us, an appearance only; in reality during all that time they were being formed and fed in the womb of the earth, where they themselves and their arms and appurtenances were manufactured; when they were completed, the earth, their mother, sent them up; and so, their country being their mother and also their nurse, they are bound to advise for her good, and to defend her against attacks, and her citizens they are to regard as children of the earth and their own brothers.",
+        "unit_id": "rep-b3-u040"
+      }
+    ],
+    "top_k": 3,
+    "results": [
+      {
+        "rank": 1,
+        "id": "rep-b2-u003",
+        "page": 40,
+        "score": 0.655666,
+        "hit": false
+      },
+      {
+        "rank": 2,
+        "id": "rep-b3-u040",
+        "page": 108,
+        "score": 0.654709,
+        "hit": true
+      },
+      {
+        "rank": 3,
+        "id": "rep-b2-u010",
+        "page": 47,
+        "score": 0.65327,
+        "hit": false
+      }
+    ],
+    "hit1": false,
+    "hit3": true,
+    "context": "[rep-b3-u040 | plato-republic-1497 | page 108]\nAnd, speaking generally, I agree with you, he said.\n\nAnd perhaps the word ‘guardian’ in the fullest sense ought to be applied to this higher class only who preserve us against foreign enemies and maintain peace among our citizens at home, that the one may not have the will, or the others the power, to harm us. The young men whom we before called guardians may be more properly designated auxiliaries and supporters of the principles of the rulers.\n\nI agree with you, he said.\n\nHow then may we devise one of those needful falsehoods of which we lately spoke—just one royal lie which may deceive the rulers, if that be possible, and at any rate the rest of the city?\n\nWhat sort of lie? he said.\n\nNothing new, I replied; only an old Phoenician tale (Laws) of what has often occurred before now in other places, (as the poets say, and have made the world believe,) though not in our time, and I do not know whether such an event could ever happen again, or could now even be made probable, if it did.\n\nHow your words seem to hesitate on your lips!\n\nYou will not wonder, I replied, at my hesitation when you have heard.\n\nSpeak, he said, and fear not.\n\nWell then, I will speak, although I really know not how to look you in the face, or in what words to utter the audacious fiction, which I propose to communicate gradually, first to the rulers, then to the soldiers, and lastly to the people. They are to be told that their youth was a dream, and the education and training which they received from us, an appearance only; in reality during all that time they were being formed and fed in the womb of the earth, where they themselves and their arms and appurtenances were manufactured; when they were completed, the earth, their mother, sent them up; and so, their country being their mother and also their nurse, they are bound to advise for her good, and to defend her against attacks, and her citizens they are to regard as children of the earth and their own brothers.\n\n[rep-b1-u006 | plato-republic-1497 | page 6]\nWell said, Cephalus, I replied; but as concerning justice, what is it?—to speak the truth and to pay your debts—no more than this? And even to this are there not exceptions? Suppose that a friend when in his right mind has deposited arms with me and he asks for them when he is not in his right mind, ought I to give them back to him? No one would say that I ought or that I should be right in doing so, any more than they would say that I ought always to speak the truth to one who is in his condition.\n\nYou are quite right, he replied.\n\nBut then, I said, speaking the truth and paying your debts is not a correct definition of justice.\n\nQuite correct, Socrates, if Simonides is to be believed, said Polemarchus interposing.\n\nI fear, said Cephalus, that I must go now, for I have to look after the sacrifices, and I hand over the argument to Polemarchus and the company.\n\nIs not Polemarchus your heir? I said.\n\nTo be sure, he answered, and went away laughing to the sacrifices.\n\nTell me then, O thou heir of the argument, what did Simonides say, and according to you truly say, about justice?\n\nHe said that the repayment of a debt is just, and in saying so he appears to me to be right.\n\nI should be sorry to doubt the word of such a wise and inspired man, but his meaning, though probably clear to you, is the reverse of clear to me. For he certainly does not mean, as we were just now saying, that I ought to return a deposit of arms or of anything else to one who asks for it when he is not in his right senses; and yet a deposit cannot be denied to be a debt.",
+    "context_ids": [
+      "rep-b3-u040",
+      "rep-b1-u006"
+    ],
+    "context_chars": 3627,
+    "context_budget": 4000,
+    "context_hit": true,
+    "elapsed_ms": 16.05910001671873
+  },
+  {
+    "query_id": "q17",
+    "split": "dev",
+    "type": "direct",
+    "question": "In the myth of the metals, which metal corresponds to each class?",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 109,
+        "evidence": "Some of you have the power of command, and in the composition of these he has mingled gold, wherefore also they have the greatest honour; others he has made of silver, to be auxiliaries; others again who are to be husbandmen and craftsmen he has composed of brass and iron",
+        "unit_id": "rep-b3-u041"
+      }
+    ],
+    "top_k": 3,
+    "results": [
+      {
+        "rank": 1,
+        "id": "rep-b3-u010",
+        "page": 78,
+        "score": 0.590284,
+        "hit": false
+      },
+      {
+        "rank": 2,
+        "id": "rep-b3-u041",
+        "page": 109,
+        "score": 0.590212,
+        "hit": true
+      },
+      {
+        "rank": 3,
+        "id": "rep-b2-u025",
+        "page": 62,
+        "score": 0.572322,
+        "hit": false
+      }
+    ],
+    "hit1": false,
+    "hit3": true,
+    "context": "[rep-b3-u010 | plato-republic-1497 | page 78]\nI grant the truth of your inference.\n\nThat such things are or are not to be said about men is a question which we cannot determine until we have discovered what justice is, and how naturally advantageous to the possessor, whether he seem to be just or not.\n\nMost true, he said.\n\nEnough of the subjects of poetry: let us now speak of the style; and when this has been considered, both matter and manner will have been completely treated.\n\nI do not understand what you mean, said Adeimantus.\n\nThen I must make you understand; and perhaps I may be more intelligible if I put the matter in this way. You are aware, I suppose, that all mythology and poetry is a narration of events, either past, present, or to come?\n\nCertainly, he replied.\n\nAnd narration may be either simple narration, or imitation, or a union of the two?\n\nThat again, he said, I do not quite understand.\n\nI fear that I must be a ridiculous teacher when I have so much difficulty in making myself apprehended. Like a bad speaker, therefore, I will not take the whole of the subject, but will break a piece off in illustration of my meaning. You know the first lines of the Iliad, in which the poet says that Chryses prayed Agamemnon to release his daughter, and that Agamemnon flew into a passion with him; whereupon Chryses, failing of his object, invoked the anger of the God against the Achaeans. Now as far as these lines,\n\n‘And he prayed all the Greeks, but especially the two sons of Atreus, the chiefs of the people,’\n\nthe poet is speaking in his own person; he never leads us to suppose that he is any one else. But in what follows he takes the person of Chryses, and then he does all that he can to make us believe that the speaker is not Homer, but the aged priest himself. And in this double form he has cast the entire narrative of the events which occurred at Troy and in Ithaca and throughout the Odyssey.\n\n[rep-b3-u041 | plato-republic-1497 | page 109]\nYou had good reason, he said, to be ashamed of the lie which you were going to tell.\n\nTrue, I replied, but there is more coming; I have only told you half. Citizens, we shall say to them in our tale, you are brothers, yet God has framed you differently. Some of you have the power of command, and in the composition of these he has mingled gold, wherefore also they have the greatest honour; others he has made of silver, to be auxiliaries; others again who are to be husbandmen and craftsmen he has composed of brass and iron; and the species will generally be preserved in the children. But as all are of the same original stock, a golden parent will sometimes have a silver son, or a silver parent a golden son. And God proclaims as a first principle to the rulers, and above all else, that there is nothing which they should so anxiously guard, or of which they are to be such good guardians, as of the purity of the race. They should observe what elements mingle in their offspring; for if the son of a golden or silver parent has an admixture of brass and iron, then nature orders a transposition of ranks, and the eye of the ruler must not be pitiful towards the child because he has to descend in the scale and become a husbandman or artisan, just as there may be sons of artisans who having an admixture of gold or silver in them are raised to honour, and become guardians or auxiliaries. For an oracle says that when a man of brass or iron guards the State, it will be destroyed. Such is the tale; is there any possibility of making our citizens believe in it?",
+    "context_ids": [
+      "rep-b3-u010",
+      "rep-b3-u041"
+    ],
+    "context_chars": 3548,
+    "context_budget": 4000,
+    "context_hit": true,
+    "elapsed_ms": 13.392100023338571
+  },
+  {
+    "query_id": "q19",
+    "split": "dev",
+    "type": "direct",
+    "question": "Why does Socrates say the guardians should have no private property or gold and silver?",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 111,
+        "evidence": "none of them should have any property of his own beyond what is absolutely necessary",
+        "unit_id": "rep-b3-u043"
+      }
+    ],
+    "top_k": 3,
+    "results": [
+      {
+        "rank": 1,
+        "id": "rep-b1-u027",
+        "page": 27,
+        "score": 0.711489,
+        "hit": false
+      },
+      {
+        "rank": 2,
+        "id": "rep-b1-u023",
+        "page": 23,
+        "score": 0.706729,
+        "hit": false
+      },
+      {
+        "rank": 3,
+        "id": "rep-b1-u006",
+        "page": 6,
+        "score": 0.704289,
+        "hit": false
+      }
+    ],
+    "hit1": false,
+    "hit3": false,
+    "context": "[rep-b1-u027 | plato-republic-1497 | page 27]\nI suppose not.\n\nBut does he therefore confer no benefit when he works for nothing?\n\nCertainly, he confers a benefit.\n\nThen now, Thrasymachus, there is no longer any doubt that neither arts nor governments provide for their own interests; but, as we were before saying, they rule and provide for the interests of their subjects who are the weaker and not the stronger—to their good they attend and not to the good of the superior. And this is the reason, my dear Thrasymachus, why, as I was just now saying, no one is willing to govern; because no one likes to take in hand the reformation of evils which are not his concern without remuneration. For, in the execution of his work, and in giving his orders to another, the true artist does not regard his own interest, but always that of his subjects; and therefore in order that rulers may be willing to rule, they must be paid in one of three modes of payment, money, or honour, or a penalty for refusing.\n\nWhat do you mean, Socrates? said Glaucon. The first two modes of payment are intelligible enough, but what the penalty is I do not understand, or how a penalty can be a payment.\n\nYou mean that you do not understand the nature of this payment which to the best men is the great inducement to rule? Of course you know that ambition and avarice are held to be, as indeed they are, a disgrace?\n\nVery true.\n\nAnd for this reason, I said, money and honour have no attraction for them; good men do not wish to be openly demanding payment for governing and so to get the name of hirelings, nor by secretly helping themselves out of the public revenues to get the name of thieves. And not being ambitious they do not care about honour. Wherefore necessity must be laid upon them, and they must be induced to serve from the fear of punishment. And this, as I imagine, is the reason why the forwardness to take office, instead of waiting to be compelled, has been deemed dishonourable. Now the worst part of the punishment is that he who refuses to rule is liable to be ruled by one who is worse than himself. And the fear of this, as I conceive, induces the good to take office, not because they would, but because they cannot help—not under the idea that they are going to have any benefit or enjoyment themselves, but as a necessity, and because they are not able to commit the task of ruling to any one who is better than themselves, or indeed as good. For there is reason to think that if a city were composed entirely of good men, then to avoid office would be as much an object of contention as to obtain office is at present; then we should have plain proof that the true ruler is not meant by nature to regard his own interest, but that of his subjects; and every one who knew this would choose rather to receive a benefit from another than to have the trouble of conferring one. So far am I from agreeing with Thrasymachus that justice is the interest of the stronger. This latter question need not be further discussed at present; but when Thrasymachus says that the life of the unjust is more advantageous than that of the just, his new statement appears to me to be of a far more serious character. Which of us has spoken truly? And which sort of life, Glaucon, do you prefer?",
+    "context_ids": [
+      "rep-b1-u027"
+    ],
+    "context_chars": 3281,
+    "context_budget": 4000,
+    "context_hit": false,
+    "elapsed_ms": 14.050500001758337
+  },
+  {
+    "query_id": "q20",
+    "split": "dev",
+    "type": "direct",
+    "question": "How are the future rulers and guardians selected and tested?",
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 107,
+        "evidence": "We must watch them from their youth upwards, and make them perform actions in which they are most likely to forget or to be deceived, and he who remembers and is not deceived is to be selected, and he who fails in the trial is to be rejected.",
+        "unit_id": "rep-b3-u039"
+      }
+    ],
+    "top_k": 3,
+    "results": [
+      {
+        "rank": 1,
+        "id": "rep-b2-u020",
+        "page": 57,
+        "score": 0.676823,
+        "hit": false
+      },
+      {
+        "rank": 2,
+        "id": "rep-b3-u038",
+        "page": 106,
+        "score": 0.667253,
+        "hit": false
+      },
+      {
+        "rank": 3,
+        "id": "rep-b3-u039",
+        "page": 107,
+        "score": 0.652127,
+        "hit": true
+      }
+    ],
+    "hit1": false,
+    "hit3": true,
+    "context": "[rep-b2-u020 | plato-republic-1497 | page 57]\nYes, he said, the tools which would teach men their own use would be beyond price.\n\nAnd the higher the duties of the guardian, I said, the more time, and skill, and art, and application will be needed by him?\n\nNo doubt, he replied.\n\nWill he not also require natural aptitude for his calling?\n\nCertainly.\n\nThen it will be our duty to select, if we can, natures which are fitted for the task of guarding the city?\n\nIt will.\n\nAnd the selection will be no easy matter, I said; but we must be brave and do our best.\n\nWe must.\n\nIs not the noble youth very like a well-bred dog in respect of guarding and watching?\n\nWhat do you mean?\n\nI mean that both of them ought to be quick to see, and swift to overtake the enemy when they see him; and strong too if, when they have caught him, they have to fight with him.\n\nAll these qualities, he replied, will certainly be required by them.\n\nWell, and your guardian must be brave if he is to fight well?\n\nCertainly.\n\nAnd is he likely to be brave who has no spirit, whether horse or dog or any other animal? Have you never observed how invincible and unconquerable is spirit and how the presence of it makes the soul of any creature to be absolutely fearless and indomitable?\n\nI have.\n\nThen now we have a clear notion of the bodily qualities which are required in the guardian.\n\nTrue.\n\nAnd also of the mental ones; his soul is to be full of spirit?\n\nYes.\n\nBut are not these spirited natures apt to be savage with one another, and with everybody else?\n\nA difficulty by no means easy to overcome, he replied.\n\n[rep-b3-u038 | plato-republic-1497 | page 106]\nVery true, he replied.\n\nThen there must be a selection. Let us note among the guardians those who in their whole life show the greatest eagerness to do what is for the good of their country, and the greatest repugnance to do what is against her interests.\n\nThose are the right men.\n\nAnd they will have to be watched at every age, in order that we may see whether they preserve their resolution, and never, under the influence either of force or enchantment, forget or cast off their sense of duty to the State.\n\nHow cast off? he said.\n\nI will explain to you, I replied. A resolution may go out of a man’s mind either with his will or against his will; with his will when he gets rid of a falsehood and learns better, against his will whenever he is deprived of a truth.\n\nI understand, he said, the willing loss of a resolution; the meaning of the unwilling I have yet to learn.\n\nWhy, I said, do you not see that men are unwillingly deprived of good, and willingly of evil? Is not to have lost the truth an evil, and to possess the truth a good? and you would agree that to conceive things as they are is to possess the truth?\n\nYes, he replied; I agree with you in thinking that mankind are deprived of truth against their will.\n\nAnd is not this involuntary deprivation caused either by theft, or force, or enchantment?\n\nStill, he replied, I do not understand you.\n\nI fear that I must have been talking darkly, like the tragedians. I only mean that some men are changed by persuasion and that others forget; argument steals away the hearts of one class, and time of the other; and this I call theft. Now you understand me?",
+    "context_ids": [
+      "rep-b2-u020",
+      "rep-b3-u038"
+    ],
+    "context_chars": 3255,
+    "context_budget": 4000,
+    "context_hit": false,
+    "elapsed_ms": 11.539300001459196
+  }
+]

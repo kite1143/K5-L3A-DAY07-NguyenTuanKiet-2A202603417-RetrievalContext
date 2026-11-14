@@ -1,0 +1,19 @@
+{
+  "method": "dense_day6",
+  "n": 15,
+  "hit1": 6,
+  "hit3": 11,
+  "hit1_rate": 0.4,
+  "hit3_rate": 0.7333,
+  "context_hit": 9,
+  "context_hit_rate": 0.6,
+  "avg_context_chars": 3222.3,
+  "median_ms": 16.505,
+  "context_budget": 4000,
+  "top_k": 3,
+  "filter_subset": {
+    "n": 3,
+    "hit1": 1,
+    "hit3": 1
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-11-14T08:45:45+00:00",
+  "method": "bm25",
+  "split": "dev",
+  "top_k": 3,
+  "context_depth": 5,
+  "context_budget": 4000,
+  "questions": 15,
+  "embedding": {
+    "provider": "fastembed",
+    "model": "BAAI/bge-small-en-v1.5",
+    "dimensions": 384
+  },
+  "hybrid": null,
+  "bm25": {
+    "k1": 1.5,
+    "b": 0.75
+  }
+}

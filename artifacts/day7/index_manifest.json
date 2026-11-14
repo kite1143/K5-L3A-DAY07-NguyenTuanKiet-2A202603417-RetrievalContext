@@ -1,0 +1,19 @@
+{
+  "built_at": "2026-11-14T08:41:40+00:00",
+  "store": {
+    "path": "artifacts\\day7\\chroma",
+    "collection": "day7_units_384",
+    "metric": "cosine"
+  },
+  "embedding": {
+    "provider": "fastembed",
+    "model": "BAAI/bge-small-en-v1.5",
+    "dimensions": 384,
+    "normalized": true
+  },
+  "chunks": 111,
+  "chunk_source": "data\\day6\\chunks.json",
+  "timing_seconds": 27.99,
+  "cost_usd": 0.0,
+  "note": "Local fastembed; không gọi API. Cùng model/version với Day 6, đơn vị văn bản là unit Day 7."
+}

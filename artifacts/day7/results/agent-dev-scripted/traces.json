@@ -1,0 +1,115 @@
+[
+  {
+    "query_id": "q01",
+    "question": "According to Cephalus, what does justice consist in?",
+    "filter": null,
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng trong tài liệu để trả lời câu hỏi này.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "tool": "hybrid_search",
+        "query": "placeholder",
+        "results": [
+          {
+            "id": "rep-b2-u012",
+            "page": 49,
+            "score": 0.016393,
+            "rank": 1
+          },
+          {
+            "id": "rep-b1-u019",
+            "page": 19,
+            "score": 0.016129,
+            "rank": 2
+          },
+          {
+            "id": "rep-b1-u007",
+            "page": 7,
+            "score": 0.015873,
+            "rank": 3
+          },
+          {
+            "id": "rep-b2-u013",
+            "page": 50,
+            "score": 0.015625,
+            "rank": 4
+          },
+          {
+            "id": "rep-b2-u014",
+            "page": 51,
+            "score": 0.015385,
+            "rank": 5
+          }
+        ],
+        "new_ids": [
+          "rep-b2-u012",
+          "rep-b1-u019",
+          "rep-b1-u007",
+          "rep-b2-u013",
+          "rep-b2-u014"
+        ],
+        "context": "[rep-b2-u012 | plato-republic-1497 | page 49]\nVery true, said Adeimantus; but how does the illustration apply to our enquiry?\n\nI will tell you, I replied; justice, which is the subject of our enquiry, is, as you know, sometimes spoken of as the virtue of an individual, and sometimes as the virtue of a State.\n\nTrue, he replied.\n\nAnd is not a State larger than an individual?\n\nIt is.\n\nThen in the larger the quantity of justice is likely to be larger and more easily discernible. I propose therefore that we enquire into the nature of justice and injustice, first as they appear in the State, and secondly in the individual, proceeding from the greater to the lesser and comparing them.\n\nThat, he said, is an excellent proposal.\n\nAnd if we imagine the State in process of creation, we shall see the justice and injustice of the State in process of creation also.\n\nI dare say.\n\nWhen the State is completed there may be a hope that the object of our search will be more easily discovered.\n\nYes, far more easily.\n\nBut ought we to attempt to construct one? I said; for to do so, as I am inclined to think, will be a very serious task. Reflect therefore.\n\nI have reflected, said Adeimantus, and am anxious that you should proceed.\n\nA State, I said, arises, as I conceive, out of the needs of mankind; no one is self-sufficing, but all of us have many wants. Can any other origin of a State be imagined?\n\nThere can be no other.\n\nThen, as we have many wants, and many persons are needed to supply them, one takes a helper for one purpose and another for another; and when these partners and helpers are gathered together in one habitation the body of inhabitants is termed a State.\n\n[rep-b1-u019 | plato-republic-1497 | page 19]\nCertainly not, he said. Do you suppose that I call him who is mistaken the stronger at the time when he is mistaken?\n\nYes, I said, my impression was that you did so, when you admitted that the ruler was not infallible but might be sometimes mistaken.\n\nYou argue like an informer, Socrates. Do you mean, for example, that he who is mistaken about the sick is a physician in that he is mistaken? or that he who errs in arithmetic or grammar is an arithmetician or grammarian at the time when he is making the mistake, in respect of the mistake? True, we say that the physician or arithmetician or grammarian has made a mistake, but this is only a way of speaking; for the fact is that neither the grammarian nor any other person of skill ever makes a mistake in so far as he is what his name implies; they none of them err unless their skill fails them, and then they cease to be skilled artists. No artist or sage or ruler errs at the time when he is what his name implies; though he is commonly said to err, and I adopted the common mode of speaking. But to be perfectly accurate, since you are such a lover of accuracy, we should say that the ruler, in so far as he is a ruler, is unerring, and, being unerring, always commands that which is for his own interest; and the subject is required to execute his commands; and therefore, as I said at first and now repeat, justice is the interest of the stronger.\n\nIndeed, Thrasymachus, and do I really appear to you to argue like an informer?\n\nCertainly, he replied.",
+        "context_ids": [
+          "rep-b2-u012",
+          "rep-b1-u019"
+        ],
+        "filter": null,
+        "latency_ms": 27.25,
+        "model_latency_ms": 0.0
+      },
+      {
+        "event": "abstain",
+        "step": 2,
+        "reason": "scripted demo không trả lời",
+        "raw": "{\"scripted\": true}",
+        "model_latency_ms": 0.0
+      }
+    ],
+    "context_chars": 3234,
+    "context_ids": [
+      "rep-b2-u012",
+      "rep-b1-u019"
+    ],
+    "searches": 1,
+    "usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0
+    },
+    "model": "scripted",
+    "provider": "scripted",
+    "latency_ms": 27.32,
+    "prompt_version": "scripted-demo",
+    "reason": "scripted demo không trả lời"
+  },
+  {
+    "query_id": "q02",
+    "question": "Does Socrates accept that one should always return what one has borrowed? Explain using his example of the weapons.",
+    "filter": null,
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng trong tài liệu để trả lời câu hỏi này.",
+    "citations": [],
+    "events": [
+      {
+        "event": "abstain",
+        "step": 1,
+        "reason": "scripted demo không trả lời",
+        "raw": "{\"scripted\": true}",
+        "model_latency_ms": 0.0
+      }
+    ],
+    "context_chars": 0,
+    "context_ids": [],
+    "searches": 0,
+    "usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0
+    },
+    "model": "scripted",
+    "provider": "scripted",
+    "latency_ms": 0.01,
+    "prompt_version": "scripted-demo",
+    "reason": "scripted demo không trả lời"
+  }
+]

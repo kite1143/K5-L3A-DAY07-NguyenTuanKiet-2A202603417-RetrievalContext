@@ -1,0 +1,19 @@
+{
+  "method": "dense",
+  "n": 15,
+  "hit1": 3,
+  "hit3": 10,
+  "hit1_rate": 0.2,
+  "hit3_rate": 0.6667,
+  "context_hit": 7,
+  "context_hit_rate": 0.4667,
+  "avg_context_chars": 3283.9,
+  "median_ms": 14.807,
+  "context_budget": 4000,
+  "top_k": 3,
+  "filter_subset": {
+    "n": 3,
+    "hit1": 1,
+    "hit3": 1
+  }
+}

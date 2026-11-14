@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-11-14T08:44:49+00:00",
+  "benchmark_result": false,
+  "split": "dev",
+  "model": "scripted",
+  "provider": "scripted",
+  "prompt_version": "scripted-demo",
+  "params": {
+    "max_searches": 2,
+    "max_steps": 5,
+    "top_k": 5,
+    "context_budget": 4000,
+    "temperature": 0.0,
+    "max_tokens": 900,
+    "tools": [
+      "dense_search",
+      "lexical_search",
+      "hybrid_search"
+    ]
+  },
+  "cases": 2,
+  "status_counts": {
+    "abstain": 2
+  },
+  "usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0
+  },
+  "cost_usd": null,
+  "cost_note": "Điền chi phí theo bảng giá provider; token ở trên là số đo thực tế.",
+  "elapsed_seconds": 0.03
+}

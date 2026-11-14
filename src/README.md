@@ -1,32 +1,66 @@
 # Code Day 7
 
-Code bước 2 (dữ liệu + benchmark). Retrieval, agent và đánh giá sẽ thêm ở các bước sau.
+## Bước 2 — dữ liệu và benchmark
 
 | File | Công dụng | Lệnh |
 |---|---|---|
-| `adapt_day6.py` | Chuyển corpus/benchmark Day 6 sang schema Day 7; kiểm tra evidence, page, id | `python src/adapt_day6.py` |
-| `validate_benchmark.py` | Kiểm tra ràng buộc benchmark (20+ câu có đáp án, 4 câu thiếu evidence, filter, hash) | `python src/validate_benchmark.py [--freeze]` |
-| `check_absence.py` | Ghi bằng chứng vắng mặt (lexical + dense + keyword) cho 4 câu thiếu evidence | `python src/check_absence.py` |
+| `adapt_day6.py` | Chuyển corpus/benchmark Day 6 sang schema Day 7 | `python src/adapt_day6.py` |
+| `validate_benchmark.py` | Kiểm tra ràng buộc benchmark + hash đóng băng | `python src/validate_benchmark.py [--freeze]` |
+| `check_absence.py` | Bằng chứng vắng mặt (lexical + dense + keyword) | `python src/check_absence.py` |
 
-## Kết quả bước 2
+## Bước 3 — retrieval
 
+| File | Công dụng |
+|---|---|
+| `build_index.py` | Dựng index 111 unit vào `artifacts/day7/chroma` (collection `day7_units_384`) |
+| `run_retrieval.py` | Chạy dense / dense_day6 / bm25 / hybrid, ghi summary + traces |
+| `retrieval/bm25.py` | BM25Okapi thuần Python |
+| `retrieval/dense.py` | Chroma + fastembed `BAAI/bge-small-en-v1.5` (384 chiều) |
+| `retrieval/dense_day6.py` | Ablation: dense trên collection Day 6 rồi gộp về unit |
+| `retrieval/hybrid.py` | RRF (k=60) giữa dense và BM25 |
+| `retrieval/context.py` | Pack context theo budget ký tự, dedup |
+| `retrieval/evaluate.py` | Hit@1 / Evidence Hit@3 / Context Evidence Rate |
+
+```powershell
+python src/build_index.py
+python src/run_retrieval.py --methods dense,dense_day6,bm25,hybrid --split dev
 ```
-chunks=111 characters=202927 by_book={1: 37, 2: 31, 3: 43}
-questions=20 by_split={'dev': 15, 'test': 5} by_type={'condition_exception': 3, 'direct': 13, 'paraphrase': 4}
-abstain=4 by_split={'dev': 2, 'test': 2}
+
+Dev (15 câu): dense 3/15 · dense_day6 6/15 · bm25 10/15 · hybrid 8/15 (Hit@1); Evidence Hit@3 lần lượt 10/15, 11/15, 11/15, **12/15**. Chi tiết: [docs/RETRIEVAL.md](../docs/RETRIEVAL.md).
+
+## Bước 4 — agent
+
+| File | Công dụng |
+|---|---|
+| `run_agent.py` | Chạy agent trên dev/test, ghi `traces.json`, `cases.json`, `run_meta.json` |
+| `agent/providers.py` | Adapter OpenAI-compatible và Ollama (HTTP thật, không mock) |
+| `agent/controller.py` | Prompt, parse JSON, validate action |
+| `agent/tools.py` | Ba tool retrieval; filter do harness cấp |
+| `agent/loop.py` | Vòng lặp, citation, abstention, trace |
+| `agent/scripted.py` | Controller kịch bản — chỉ để test đường ống |
+
+```powershell
+$env:DAY7_LLM_PROVIDER="openai"; $env:DAY7_LLM_MODEL="gpt-4o-mini"; $env:DAY7_LLM_API_KEY="<key>"
+python src/run_agent.py --split dev --out artifacts/day7/results/agent-dev
 ```
 
-Kiểm tra: `validate_benchmark.py` trả `errors=0`. Baseline TF-IDF trên dev: Hit@1 7/15, Hit@3 13/15 (context rỗng vì budget mặc định 800 ký tự < độ dài unit — xem `docs/DAY6_CONNECTION.md` mục 5).
+Thiết kế và trạng thái: [docs/AGENT.md](../docs/AGENT.md).
+
+## Kiểm thử
+
+```powershell
+python -m unittest discover -s tests     # 34/35 pass; 1 lỗi do sandbox chặn chmod khi dọn tempfile
+```
+
+`tests/test_day7_retrieval.py` (13 test) và `tests/test_day7_agent.py` (7 test) phủ BM25, RRF, context packing, định nghĩa hit, parse action, citation sai và lỗi provider.
 
 ## Cấu trúc dữ liệu
 
 ```
-data/day6/
-  raw/                     bản gốc Day 6 (corpus.jsonl, questions.jsonl, manifest, units.csv)
-  chunks.json              111 chunk theo schema Day 7
-  questions.json           20 câu có đáp án (15 dev / 5 test)
-  abstain.json             4 câu thiếu evidence + review đã xác nhận
-  abstain_checks.json      bằng chứng kiểm tra vắng mặt
-  manifest.json            nguồn, hash, thống kê, embedding/store, giới hạn
-  benchmark_manifest.json  hash đóng băng của bộ benchmark
+data/day6/                 chunks.json, questions.json, abstain.json, abstain_checks.json,
+                           manifest.json, benchmark_manifest.json, raw/
+artifacts/day7/
+  chroma/                  index dense 111 unit (gitignore)
+  index_manifest.json      model, số chiều, thời gian, chi phí
+  results/dev-*/           summary.json, traces.json, run_config.json
 ```

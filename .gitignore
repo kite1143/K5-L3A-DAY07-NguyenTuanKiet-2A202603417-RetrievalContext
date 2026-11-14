@@ -11,5 +11,6 @@ starter/data/
 starter/results/
 # Day 7 artifacts: vector store copy, model cache, scratch output
 artifacts/day6/chroma/
+artifacts/day7/chroma/
 artifacts/day6/fastembed_cache/
 .tmp/

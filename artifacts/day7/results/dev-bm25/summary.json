@@ -1,0 +1,19 @@
+{
+  "method": "bm25",
+  "n": 15,
+  "hit1": 10,
+  "hit3": 11,
+  "hit1_rate": 0.6667,
+  "hit3_rate": 0.7333,
+  "context_hit": 10,
+  "context_hit_rate": 0.6667,
+  "avg_context_chars": 3277.1,
+  "median_ms": 1.632,
+  "context_budget": 4000,
+  "top_k": 3,
+  "filter_subset": {
+    "n": 3,
+    "hit1": 2,
+    "hit3": 2
+  }
+}
