@@ -17,7 +17,7 @@
 ### So sánh phương pháp trên dev (15 câu có đáp án, cùng 111 unit)
 
 | Cấu hình | Phương pháp, top-k, filter | Giả thuyết / thay đổi | Split | Hit@1 | Evidence Hit@3 | Context Evidence Rate | Thời gian / chi phí |
-|---|---|---|---|---|---:|---:|---:|---|
+|---|---|---|---|---:|---:|---:|---|
 | Dense unit | bge-small 384d, cosine, top-3 | baseline dense đúng hợp đồng Day 7 | dev | 3/15 (20,0%) | 10/15 (66,7%) | 7/15 (46,7%) | 14,8 ms/query, 0 USD |
 | BM25 | BM25Okapi k1=1,5 b=0,75, top-3 | lexical có mạnh hơn dense trên văn bản cổ không | dev | **10/15 (66,7%)** | 11/15 (73,3%) | **10/15 (66,7%)** | 1,6 ms/query, 0 USD |
 | Hybrid RRF | RRF(dense, bm25), k=60, depth=20 | hợp nhất hai thang điểm bằng thứ hạng | dev | 8/15 (53,3%) | **12/15 (80,0%)** | 9/15 (60,0%) | 19,9 ms/query, 0 USD |
@@ -31,7 +31,7 @@ Filter chỉ dùng metadata `book` (3 câu dev, 2 câu test), cấp trước khi
 ### Cấu hình agent trên dev (17 câu) — 3 thử nghiệm cải thiện
 
 | Cấu hình | Phương pháp, context budget, số lượt | Giả thuyết / thay đổi | Split | Grounded TB /2 | Từ chối nhầm | Hit@3 của nhánh retrieval | Chi phí |
-|---|---|---|---|---|---:|---:|---|---:|
+|---|---|---|---|---:|---:|---|---:|
 | B0 | hybrid unit, budget 4.000, 2 lượt | baseline | dev | 1,40 | 4/15 | 12/15 | 0,0054 USD |
 | C1 | hybrid Day 6, budget 4.000, 2 lượt | sửa cắt 512 token | dev | 1,47 | 3/15 | 12/15 | 0,0057 USD |
 | **C2** | hybrid unit, budget 6.000, 3 lượt | context chứa được nhiều unit hơn | dev | **1,73** | **1/15** | 12/15 | 0,0077 USD |
