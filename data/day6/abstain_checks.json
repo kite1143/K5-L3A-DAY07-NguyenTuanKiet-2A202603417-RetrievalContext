@@ -1,0 +1,556 @@
+{
+  "generated_at": "2026-11-14T08:26:40+00:00",
+  "generated_by": "src/check_absence.py",
+  "purpose": "Bằng chứng kiểm tra vắng mặt: top-5 lexical, top-5 dense và số lần xuất hiện thuật ngữ chủ đề. Không dùng top-k miss làm kết luận duy nhất.",
+  "corpus_chunks": 111,
+  "store": {
+    "path": "artifacts\\day6\\chroma",
+    "collection": "republic_B_384"
+  },
+  "dense_enabled": true,
+  "results": [
+    {
+      "id": "a01",
+      "split": "dev",
+      "question": "How old is Socrates when he talks with Cephalus in the Piraeus?",
+      "best_lexical_score": 0.2566,
+      "best_dense_cosine": 0.6882,
+      "lexical_top5": [
+        {
+          "chunk_id": "rep-b1-u003",
+          "page": 3,
+          "book": 1,
+          "score": 0.2566,
+          "snippet": "I replied: There is nothing which for my part I like better, Cephalus, than conversing with aged men; for I regard them as travellers who have gone a journey which I too may have to go, and of whom I ought to enquire, whether the way is smooth and easy, or rug"
+        },
+        {
+          "chunk_id": "rep-b1-u002",
+          "page": 2,
+          "book": 1,
+          "score": 0.1704,
+          "snippet": "Certainly not, replied Glaucon.\n\nThen we are not going to listen; of that you may be assured.\n\nAdeimantus added: Has no one told you of the torch-race on horseback in honour of the goddess which will take place in the evening?\n\nWith horses! I replied: That is "
+        },
+        {
+          "chunk_id": "rep-b1-u004",
+          "page": 4,
+          "book": 1,
+          "score": 0.1697,
+          "snippet": "I listened in admiration, and wanting to draw him out, that he might go on—Yes, Cephalus, I said: but I rather suspect that people in general are not convinced by you when you speak thus; they think that old age sits lightly upon you, not because of your happy"
+        },
+        {
+          "chunk_id": "rep-b1-u001",
+          "page": 1,
+          "book": 1,
+          "score": 0.1583,
+          "snippet": "I went down yesterday to the Piraeus with Glaucon the son of Ariston, that I might offer up my prayers to the goddess (Bendis, the Thracian Artemis.); and also because I wanted to see in what manner they would celebrate the festival, which was a new thing. I w"
+        },
+        {
+          "chunk_id": "rep-b1-u006",
+          "page": 6,
+          "book": 1,
+          "score": 0.1576,
+          "snippet": "Well said, Cephalus, I replied; but as concerning justice, what is it?—to speak the truth and to pay your debts—no more than this? And even to this are there not exceptions? Suppose that a friend when in his right mind has deposited arms with me and he asks fo"
+        }
+      ],
+      "dense_top5": [
+        {
+          "chunk_id": "B:rep-b1-u004:0000",
+          "unit_id": "rep-b1-u004",
+          "page": 4,
+          "cosine_similarity": 0.6882,
+          "snippet": "I listened in admiration, and wanting to draw him out, that he might go on—Yes, Cephalus, I said: but I rather suspect that people in general are not convinced by you when you speak thus; they think that old age sits lightly upon you, not because of your happy"
+        },
+        {
+          "chunk_id": "B:rep-b1-u003:0000",
+          "unit_id": "rep-b1-u003",
+          "page": 3,
+          "cosine_similarity": 0.683,
+          "snippet": "I replied: There is nothing which for my part I like better, Cephalus, than conversing with aged men; for I regard them as travellers who have gone a journey which I too may have to go, and of whom I ought to enquire, whether the way is smooth and easy, or rug"
+        },
+        {
+          "chunk_id": "B:rep-b1-u002:0001",
+          "unit_id": "rep-b1-u002",
+          "page": 2,
+          "cosine_similarity": 0.6744,
+          "snippet": "You don’t come to see me, Socrates, as often as you ought: If I were still able to go and see you I would not ask you to come to me. But at my age I can hardly get to the city, and therefore you should come oftener to the Piraeus. For let me tell you, that the"
+        },
+        {
+          "chunk_id": "B:rep-b1-u001:0000",
+          "unit_id": "rep-b1-u001",
+          "page": 1,
+          "cosine_similarity": 0.6695,
+          "snippet": "I went down yesterday to the Piraeus with Glaucon the son of Ariston, that I might offer up my prayers to the goddess (Bendis, the Thracian Artemis.); and also because I wanted to see in what manner they would celebrate the festival, which was a new thing. I w"
+        },
+        {
+          "chunk_id": "B:rep-b3-u010:0001",
+          "unit_id": "rep-b3-u010",
+          "page": 78,
+          "cosine_similarity": 0.6505,
+          "snippet": "the poet is speaking in his own person; he never leads us to suppose that he is any one else. But in what follows he takes the person of Chryses, and then he does all that he can to make us believe that the speaker is not Homer, but the aged priest himself. An"
+        }
+      ],
+      "keyword_scan": [
+        {
+          "term": "old",
+          "count": 41,
+          "units": [
+            "rep-b1-u001",
+            "rep-b1-u002",
+            "rep-b1-u003",
+            "rep-b1-u004",
+            "rep-b1-u007",
+            "rep-b1-u009"
+          ]
+        },
+        {
+          "term": "age",
+          "count": 57,
+          "units": [
+            "rep-b1-u002",
+            "rep-b1-u003",
+            "rep-b1-u004",
+            "rep-b1-u005",
+            "rep-b1-u008",
+            "rep-b1-u013"
+          ]
+        },
+        {
+          "term": "years",
+          "count": 3,
+          "units": [
+            "rep-b2-u019",
+            "rep-b3-u021",
+            "rep-b3-u024"
+          ]
+        },
+        {
+          "term": "Socrates",
+          "count": 33,
+          "units": [
+            "rep-b1-u001",
+            "rep-b1-u002",
+            "rep-b1-u003",
+            "rep-b1-u004",
+            "rep-b1-u005",
+            "rep-b1-u006"
+          ]
+        },
+        {
+          "term": "Cephalus",
+          "count": 5,
+          "units": [
+            "rep-b1-u001",
+            "rep-b1-u002",
+            "rep-b1-u003",
+            "rep-b1-u004",
+            "rep-b1-u006"
+          ]
+        },
+        {
+          "term": "Piraeus",
+          "count": 2,
+          "units": [
+            "rep-b1-u001",
+            "rep-b1-u002"
+          ]
+        }
+      ],
+      "keyword_terms_present": [
+        "old",
+        "age",
+        "years",
+        "Socrates",
+        "Cephalus",
+        "Piraeus"
+      ],
+      "manual_verdict": "Corpus chỉ nói về tuổi già của Cephalus và nỗi sợ sau khi chết, không nêu tuổi của Socrates hay bất kỳ con số tuổi nào của người kể chuyện.",
+      "reviewed_hits": [
+        "rep-b1-u005",
+        "rep-b1-u001"
+      ]
+    },
+    {
+      "id": "a02",
+      "split": "dev",
+      "question": "What are the three waves of paradox in Book V, and which one does Socrates call the greatest?",
+      "best_lexical_score": 0.2625,
+      "best_dense_cosine": 0.6957,
+      "lexical_top5": [
+        {
+          "chunk_id": "rep-b1-u028",
+          "page": 28,
+          "book": 1,
+          "score": 0.2625,
+          "snippet": "I for my part deem the life of the just to be the more advantageous, he answered.\n\nDid you hear all the advantages of the unjust which Thrasymachus was rehearsing?\n\nYes, I heard him, he replied, but he has not convinced me.\n\nThen shall we try to find some way "
+        },
+        {
+          "chunk_id": "rep-b1-u023",
+          "page": 23,
+          "book": 1,
+          "score": 0.2571,
+          "snippet": "When we had got to this point in the argument, and every one saw that the definition of justice had been completely upset, Thrasymachus, instead of replying to me, said: Tell me, Socrates, have you got a nurse?\n\nWhy do you ask such a question, I said, when you"
+        },
+        {
+          "chunk_id": "rep-b2-u010",
+          "page": 47,
+          "book": 2,
+          "score": 0.255,
+          "snippet": "On what principle, then, shall we any longer choose justice rather than the worst injustice? when, if we only unite the latter with a deceitful regard to appearances, we shall fare to our mind both with gods and men, in life and after death, as the most numero"
+        },
+        {
+          "chunk_id": "rep-b3-u016",
+          "page": 84,
+          "book": 3,
+          "score": 0.2431,
+          "snippet": "That, he said, will be his mode of speaking.\n\nThese, then, are the two kinds of style?\n\nYes.\n\nAnd you would agree with me in saying that one of them is simple and has but slight changes; and if the harmony and rhythm are also chosen for their simplicity, the r"
+        },
+        {
+          "chunk_id": "rep-b3-u018",
+          "page": 86,
+          "book": 3,
+          "score": 0.242,
+          "snippet": "At any rate you can tell that a song or ode has three parts—the words, the melody, and the rhythm; that degree of knowledge I may presuppose?\n\nYes, he said; so much as that you may.\n\nAnd as for the words, there will surely be no difference between words which "
+        }
+      ],
+      "dense_top5": [
+        {
+          "chunk_id": "B:rep-b2-u001:0000",
+          "unit_id": "rep-b2-u001",
+          "page": 38,
+          "cosine_similarity": 0.6957,
+          "snippet": "With these words I was thinking that I had made an end of the discussion; but the end, in truth, proved to be only a beginning. For Glaucon, who is always the most pugnacious of men, was dissatisfied at Thrasymachus’ retirement; he wanted to have the battle ou"
+        },
+        {
+          "chunk_id": "B:rep-b2-u010:0001",
+          "unit_id": "rep-b2-u010",
+          "page": 47,
+          "cosine_similarity": 0.6537,
+          "snippet": "The cause of all this, Socrates, was indicated by us at the beginning of the argument, when my brother and I told you how astonished we were to find that of all the professing panegyrists of justice—beginning with the ancient heroes of whom any memorial has be"
+        },
+        {
+          "chunk_id": "B:rep-b1-u019:0000",
+          "unit_id": "rep-b1-u019",
+          "page": 19,
+          "cosine_similarity": 0.6533,
+          "snippet": "Certainly not, he said. Do you suppose that I call him who is mistaken the stronger at the time when he is mistaken?\n\nYes, I said, my impression was that you did so, when you admitted that the ruler was not infallible but might be sometimes mistaken.\n\nYou argu"
+        },
+        {
+          "chunk_id": "B:rep-b2-u005:0000",
+          "unit_id": "rep-b2-u005",
+          "page": 42,
+          "cosine_similarity": 0.65,
+          "snippet": "Heavens! my dear Glaucon, I said, how energetically you polish them up for the decision, first one and then the other, as if they were two statues.\n\nI do my best, he said. And now that we know what they are like there is no difficulty in tracing out the sort o"
+        },
+        {
+          "chunk_id": "B:rep-b1-u005:0000",
+          "unit_id": "rep-b1-u005",
+          "page": 5,
+          "cosine_similarity": 0.65,
+          "snippet": "That is true, he said.\n\nYes, that is very true, but may I ask another question?—What do you consider to be the greatest blessing which you have reaped from your wealth?\n\nOne, he said, of which I could not expect easily to convince others. For let me tell you, "
+        }
+      ],
+      "keyword_scan": [
+        {
+          "term": "wave",
+          "count": 0,
+          "units": []
+        },
+        {
+          "term": "paradox",
+          "count": 0,
+          "units": []
+        },
+        {
+          "term": "Book V",
+          "count": 0,
+          "units": []
+        },
+        {
+          "term": "philosopher",
+          "count": 5,
+          "units": [
+            "rep-b1-u014",
+            "rep-b2-u009",
+            "rep-b2-u021",
+            "rep-b2-u022",
+            "rep-b3-u035"
+          ]
+        },
+        {
+          "term": "king",
+          "count": 58,
+          "units": [
+            "rep-b1-u004",
+            "rep-b1-u006",
+            "rep-b1-u008",
+            "rep-b1-u009",
+            "rep-b1-u011",
+            "rep-b1-u012"
+          ]
+        }
+      ],
+      "keyword_terms_present": [
+        "philosopher",
+        "king"
+      ],
+      "manual_verdict": "Corpus chỉ gồm Books I-III; ba làn sóng nghịch lý nằm ở Book V (đã loại khỏi phạm vi), nên không có câu trả lời trong 111 unit.",
+      "reviewed_hits": []
+    },
+    {
+      "id": "a03",
+      "split": "test",
+      "question": "What is the nuptial number in Book VIII, and how does Socrates compute it?",
+      "best_lexical_score": 0.1984,
+      "best_dense_cosine": 0.6674,
+      "lexical_top5": [
+        {
+          "chunk_id": "rep-b1-u023",
+          "page": 23,
+          "book": 1,
+          "score": 0.1984,
+          "snippet": "When we had got to this point in the argument, and every one saw that the definition of justice had been completely upset, Thrasymachus, instead of replying to me, said: Tell me, Socrates, have you got a nurse?\n\nWhy do you ask such a question, I said, when you"
+        },
+        {
+          "chunk_id": "rep-b2-u024",
+          "page": 61,
+          "book": 2,
+          "score": 0.1881,
+          "snippet": "We cannot.\n\nThen the first thing will be to establish a censorship of the writers of fiction, and let the censors receive any tale of fiction which is good, and reject the bad; and we will desire mothers and nurses to tell their children the authorised ones on"
+        },
+        {
+          "chunk_id": "rep-b2-u026",
+          "page": 63,
+          "book": 2,
+          "score": 0.1786,
+          "snippet": "There you are right, he replied; but if any one asks where are such models to be found and of what tales are you speaking—how shall we answer him?\n\nI said to him, You and I, Adeimantus, at this moment are not poets, but founders of a State: now the founders of"
+        },
+        {
+          "chunk_id": "rep-b2-u005",
+          "page": 42,
+          "book": 2,
+          "score": 0.1693,
+          "snippet": "Heavens! my dear Glaucon, I said, how energetically you polish them up for the decision, first one and then the other, as if they were two statues.\n\nI do my best, he said. And now that we know what they are like there is no difficulty in tracing out the sort o"
+        },
+        {
+          "chunk_id": "rep-b1-u015",
+          "page": 15,
+          "book": 1,
+          "score": 0.1692,
+          "snippet": "What, and no payment! a pleasant notion!\n\nI will pay when I have the money, I replied.\n\nBut you have, Socrates, said Glaucon: and you, Thrasymachus, need be under no anxiety about money, for we will all make a contribution for Socrates.\n\nYes, he replied, and t"
+        }
+      ],
+      "dense_top5": [
+        {
+          "chunk_id": "B:rep-b1-u014:0000",
+          "unit_id": "rep-b1-u014",
+          "page": 14,
+          "cosine_similarity": 0.6674,
+          "snippet": "How characteristic of Socrates! he replied, with a bitter laugh;—that’s your ironical style! Did I not foresee—have I not already told you, that whatever he was asked he would refuse to answer, and try irony or any other shuffle, in order that he might avoid a"
+        },
+        {
+          "chunk_id": "B:rep-b1-u019:0000",
+          "unit_id": "rep-b1-u019",
+          "page": 19,
+          "cosine_similarity": 0.6508,
+          "snippet": "Certainly not, he said. Do you suppose that I call him who is mistaken the stronger at the time when he is mistaken?\n\nYes, I said, my impression was that you did so, when you admitted that the ruler was not infallible but might be sometimes mistaken.\n\nYou argu"
+        },
+        {
+          "chunk_id": "B:rep-b3-u020:0001",
+          "unit_id": "rep-b3-u020",
+          "page": 88,
+          "cosine_similarity": 0.6434,
+          "snippet": "Then, I said, we must take Damon into our counsels; and he will tell us what rhythms are expressive of meanness, or insolence, or fury, or other unworthiness, and what are to be reserved for the expression of opposite feelings. And I think that I have an indis"
+        },
+        {
+          "chunk_id": "B:rep-b1-u006:0000",
+          "unit_id": "rep-b1-u006",
+          "page": 6,
+          "cosine_similarity": 0.6347,
+          "snippet": "Well said, Cephalus, I replied; but as concerning justice, what is it?—to speak the truth and to pay your debts—no more than this? And even to this are there not exceptions? Suppose that a friend when in his right mind has deposited arms with me and he asks fo"
+        },
+        {
+          "chunk_id": "B:rep-b2-u010:0001",
+          "unit_id": "rep-b2-u010",
+          "page": 47,
+          "cosine_similarity": 0.6287,
+          "snippet": "The cause of all this, Socrates, was indicated by us at the beginning of the argument, when my brother and I told you how astonished we were to find that of all the professing panegyrists of justice—beginning with the ancient heroes of whom any memorial has be"
+        }
+      ],
+      "keyword_scan": [
+        {
+          "term": "nuptial",
+          "count": 1,
+          "units": [
+            "rep-b2-u031"
+          ]
+        },
+        {
+          "term": "number",
+          "count": 5,
+          "units": [
+            "rep-b1-u014",
+            "rep-b1-u028",
+            "rep-b2-u015",
+            "rep-b2-u024",
+            "rep-b3-u032"
+          ]
+        },
+        {
+          "term": "Book VIII",
+          "count": 0,
+          "units": []
+        },
+        {
+          "term": "compute",
+          "count": 0,
+          "units": []
+        }
+      ],
+      "keyword_terms_present": [
+        "nuptial",
+        "number"
+      ],
+      "manual_verdict": "Nuptial number thuộc Book VIII (ngoài phạm vi Books I-III). Unit rep-b2-u031 có chữ 'nuptial' nhưng nói về đám cưới của Thetis trong thơ Aeschylus, không liên quan tới con số.",
+      "reviewed_hits": [
+        "rep-b2-u031"
+      ]
+    },
+    {
+      "id": "a04",
+      "split": "test",
+      "question": "What is the exact total number of guardians Socrates says the ideal city needs?",
+      "best_lexical_score": 0.1441,
+      "best_dense_cosine": 0.6608,
+      "lexical_top5": [
+        {
+          "chunk_id": "rep-b2-u024",
+          "page": 61,
+          "book": 2,
+          "score": 0.1441,
+          "snippet": "We cannot.\n\nThen the first thing will be to establish a censorship of the writers of fiction, and let the censors receive any tale of fiction which is good, and reject the bad; and we will desire mothers and nurses to tell their children the authorised ones on"
+        },
+        {
+          "chunk_id": "rep-b2-u006",
+          "page": 43,
+          "book": 2,
+          "score": 0.1366,
+          "snippet": "I was going to say something in answer to Glaucon, when Adeimantus, his brother, interposed: Socrates, he said, you do not suppose that there is nothing more to be urged?\n\nWhy, what else is there? I answered.\n\nThe strongest point of all has not been even menti"
+        },
+        {
+          "chunk_id": "rep-b1-u022",
+          "page": 22,
+          "book": 1,
+          "score": 0.1366,
+          "snippet": "Yes, clearly.\n\nThen medicine does not consider the interest of medicine, but the interest of the body?\n\nTrue, he said.\n\nNor does the art of horsemanship consider the interests of the art of horsemanship, but the interests of the horse; neither do any other art"
+        },
+        {
+          "chunk_id": "rep-b1-u025",
+          "page": 25,
+          "book": 1,
+          "score": 0.1343,
+          "snippet": "And how am I to convince you, he said, if you are not already convinced by what I have just said; what more can I do for you? Would you have me put the proof bodily into your souls?\n\nHeaven forbid! I said; I would only ask you to be consistent; or, if you chan"
+        },
+        {
+          "chunk_id": "rep-b1-u023",
+          "page": 23,
+          "book": 1,
+          "score": 0.1341,
+          "snippet": "When we had got to this point in the argument, and every one saw that the definition of justice had been completely upset, Thrasymachus, instead of replying to me, said: Tell me, Socrates, have you got a nurse?\n\nWhy do you ask such a question, I said, when you"
+        }
+      ],
+      "dense_top5": [
+        {
+          "chunk_id": "B:rep-b3-u037:0000",
+          "unit_id": "rep-b3-u037",
+          "page": 105,
+          "cosine_similarity": 0.6608,
+          "snippet": "That appears to be the intention.\n\nAnd he who mingles music with gymnastic in the fairest proportions, and best attempers them to the soul, may be rightly called the true musician and harmonist in a far higher sense than the tuner of the strings.\n\nYou are quit"
+        },
+        {
+          "chunk_id": "B:rep-b3-u038:0000",
+          "unit_id": "rep-b3-u038",
+          "page": 106,
+          "cosine_similarity": 0.6536,
+          "snippet": "Very true, he replied.\n\nThen there must be a selection. Let us note among the guardians those who in their whole life show the greatest eagerness to do what is for the good of their country, and the greatest repugnance to do what is against her interests.\n\nTho"
+        },
+        {
+          "chunk_id": "B:rep-b2-u010:0001",
+          "unit_id": "rep-b2-u010",
+          "page": 47,
+          "cosine_similarity": 0.6444,
+          "snippet": "The cause of all this, Socrates, was indicated by us at the beginning of the argument, when my brother and I told you how astonished we were to find that of all the professing panegyrists of justice—beginning with the ancient heroes of whom any memorial has be"
+        },
+        {
+          "chunk_id": "B:rep-b2-u020:0000",
+          "unit_id": "rep-b2-u020",
+          "page": 57,
+          "cosine_similarity": 0.6399,
+          "snippet": "Yes, he said, the tools which would teach men their own use would be beyond price.\n\nAnd the higher the duties of the guardian, I said, the more time, and skill, and art, and application will be needed by him?\n\nNo doubt, he replied.\n\nWill he not also require na"
+        },
+        {
+          "chunk_id": "B:rep-b2-u001:0000",
+          "unit_id": "rep-b2-u001",
+          "page": 38,
+          "cosine_similarity": 0.6387,
+          "snippet": "With these words I was thinking that I had made an end of the discussion; but the end, in truth, proved to be only a beginning. For Glaucon, who is always the most pugnacious of men, was dissatisfied at Thrasymachus’ retirement; he wanted to have the battle ou"
+        }
+      ],
+      "keyword_scan": [
+        {
+          "term": "guardians",
+          "count": 16,
+          "units": [
+            "rep-b2-u025",
+            "rep-b2-u031",
+            "rep-b3-u002",
+            "rep-b3-u004",
+            "rep-b3-u012",
+            "rep-b3-u013"
+          ]
+        },
+        {
+          "term": "number",
+          "count": 5,
+          "units": [
+            "rep-b1-u014",
+            "rep-b1-u028",
+            "rep-b2-u015",
+            "rep-b2-u024",
+            "rep-b3-u032"
+          ]
+        },
+        {
+          "term": "city",
+          "count": 25,
+          "units": [
+            "rep-b1-u001",
+            "rep-b1-u002",
+            "rep-b1-u027",
+            "rep-b1-u028",
+            "rep-b1-u034",
+            "rep-b2-u004"
+          ]
+        },
+        {
+          "term": "how many",
+          "count": 2,
+          "units": [
+            "rep-b1-u001",
+            "rep-b1-u003"
+          ]
+        }
+      ],
+      "keyword_terms_present": [
+        "guardians",
+        "number",
+        "city",
+        "how many"
+      ],
+      "manual_verdict": "Books I-III bàn nhiều về phẩm chất, giáo dục và việc chọn guardian nhưng không nêu tổng số guardian của thành bang; không có câu nào chứa con số tổng.",
+      "reviewed_hits": [
+        "rep-b2-u021",
+        "rep-b3-u040"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,392 @@
+[
+  {
+    "id": "q01",
+    "split": "dev",
+    "question": "According to Cephalus, what does justice consist in?",
+    "expected_answer": "Speaking the truth and paying one's debts.",
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 6,
+        "evidence": "to speak the truth and to pay your debts—no more than this?",
+        "unit_id": "rep-b1-u006"
+      }
+    ],
+    "filter": null,
+    "type": "direct",
+    "gold_unit_id": "rep-b1-u006",
+    "gold_book": 1,
+    "leakage_risk": "Cephalus's definition is stated explicitly in the same sentence as the question's topic."
+  },
+  {
+    "id": "q02",
+    "split": "dev",
+    "question": "Does Socrates accept that one should always return what one has borrowed? Explain using his example of the weapons.",
+    "expected_answer": "No. If a friend deposited weapons while sane and asks for them while insane, returning them could harm him; the rule 'pay your debts' has exceptions.",
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 6,
+        "evidence": "Suppose that a friend when in his right mind has deposited arms with me and he asks for them when he is not in his right mind, ought I to give them back to him?",
+        "unit_id": "rep-b1-u006"
+      }
+    ],
+    "filter": null,
+    "type": "condition_exception",
+    "gold_unit_id": "rep-b1-u006",
+    "gold_book": 1,
+    "leakage_risk": "The example itself names the exception, so a lexical match may retrieve the right passage easily."
+  },
+  {
+    "id": "q03",
+    "split": "dev",
+    "question": "What definition of justice does Thrasymachus announce?",
+    "expected_answer": "Justice is nothing other than the interest of the stronger.",
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 16,
+        "evidence": "I proclaim that justice is nothing else than the interest of the stronger.",
+        "unit_id": "rep-b1-u016"
+      }
+    ],
+    "filter": {
+      "book": 1
+    },
+    "type": "direct",
+    "gold_unit_id": "rep-b1-u016",
+    "gold_book": 1,
+    "leakage_risk": "The filter narrows to Book I (37 units) but does not identify the gold unit or page."
+  },
+  {
+    "id": "q04",
+    "split": "test",
+    "question": "How does Socrates use the craft analogy to answer Thrasymachus's claim that rulers pursue their own advantage?",
+    "expected_answer": "Every art considers the good of its subject matter, not its own good; medicine serves the body and piloting serves sailors, so a true ruler serves the ruled rather than himself.",
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 22,
+        "evidence": "no science or art considers or enjoins the interest of the stronger or superior, but only the interest of the subject and weaker",
+        "unit_id": "rep-b1-u022"
+      }
+    ],
+    "filter": null,
+    "type": "paraphrase",
+    "gold_unit_id": "rep-b1-u022",
+    "gold_book": 1,
+    "leakage_risk": "The question paraphrases the argument; the answer requires connecting the general principle to the medical and pilot examples."
+  },
+  {
+    "id": "q05",
+    "split": "dev",
+    "question": "What does Thrasymachus claim about the relative fortunes of the just and unjust man?",
+    "expected_answer": "The just man always loses compared with the unjust; the unjust profits in contracts, taxes and office, and large-scale injustice such as tyranny is the happiest life.",
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 23,
+        "evidence": "the just is always a loser in comparison with the unjust",
+        "unit_id": "rep-b1-u023"
+      }
+    ],
+    "filter": null,
+    "type": "direct",
+    "gold_unit_id": "rep-b1-u023",
+    "gold_book": 1,
+    "leakage_risk": "The thesis sentence is explicit; the supporting examples are nearby but not required by the question."
+  },
+  {
+    "id": "q06",
+    "split": "dev",
+    "question": "In which class of goods does Socrates place justice, and why?",
+    "expected_answer": "In the highest class: justice is desired both for its own sake and for the sake of its consequences.",
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 38,
+        "evidence": "In the highest class, I replied,—among those goods which he who would be happy desires both for their own sake and for the sake of their results.",
+        "unit_id": "rep-b2-u001"
+      }
+    ],
+    "filter": null,
+    "type": "direct",
+    "gold_unit_id": "rep-b2-u001",
+    "gold_book": 2,
+    "leakage_risk": "The answer is explicit in Glaucon's threefold classification of goods."
+  },
+  {
+    "id": "q07",
+    "split": "test",
+    "question": "What power does the ring of Gyges give its wearer?",
+    "expected_answer": "It makes the wearer invisible when the collet is turned inward, and visible again when it is turned outward.",
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 40,
+        "evidence": "when he turned the collet inwards he became invisible, when outwards he reappeared.",
+        "unit_id": "rep-b2-u003"
+      }
+    ],
+    "filter": {
+      "book": 2
+    },
+    "type": "direct",
+    "gold_unit_id": "rep-b2-u003",
+    "gold_book": 2,
+    "leakage_risk": "The filter narrows to Book II (31 units); the ring narrative is concentrated in one unit, but the filter does not reveal it."
+  },
+  {
+    "id": "q08",
+    "split": "dev",
+    "question": "What conclusion does Glaucon draw from the ring of Gyges about human justice?",
+    "expected_answer": "Even a just man would not remain just if he could act invisibly and escape detection; people practise justice only under compulsion, not because it is good in itself.",
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 40,
+        "evidence": "no man can be imagined to be of such an iron nature that he would stand fast in justice",
+        "unit_id": "rep-b2-u003"
+      }
+    ],
+    "filter": null,
+    "type": "paraphrase",
+    "gold_unit_id": "rep-b2-u003",
+    "gold_book": 2,
+    "leakage_risk": "The conclusion must be inferred from the ring thought experiment rather than quoted as a definition."
+  },
+  {
+    "id": "q09",
+    "split": "dev",
+    "question": "Why does Glaucon object to Socrates's simple city as a 'city of pigs'?",
+    "expected_answer": "Because it offers only bare necessities; Glaucon wants ordinary comforts such as sofas, tables, sauces and sweets.",
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 54,
+        "evidence": "Yes, Socrates, he said, and if you were providing for a city of pigs, how else would you feed the beasts?\n\nBut what would you have, Glaucon? I replied.\n\nWhy, he said, you should give them the ordinary conveniences of life. People who are to be comfortable are accustomed to lie on sofas, and dine off tables, and they should have sauces and sweets in the modern style.",
+        "unit_id": "rep-b2-u017"
+      }
+    ],
+    "filter": {
+      "book": 2
+    },
+    "type": "paraphrase",
+    "gold_unit_id": "rep-b2-u017",
+    "gold_book": 2,
+    "leakage_risk": "The question repeats a distinctive phrase from the source, which may make lexical retrieval easier; the filter is only Book II."
+  },
+  {
+    "id": "q10",
+    "split": "test",
+    "question": "Why does war arise in the luxurious city?",
+    "expected_answer": "Because the enlarged city's desire for wealth requires more land for pasture and tillage; it takes a slice of its neighbours' land, and war follows.",
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 55,
+        "evidence": "Then a slice of our neighbours’ land will be wanted by us for pasture and tillage",
+        "unit_id": "rep-b2-u018"
+      }
+    ],
+    "filter": null,
+    "type": "direct",
+    "gold_unit_id": "rep-b2-u018",
+    "gold_book": 2,
+    "leakage_risk": "The causal chain spans several sentences, so the answer requires local coherence rather than a single keyword."
+  },
+  {
+    "id": "q11",
+    "split": "dev",
+    "question": "What is the first measure Socrates proposes for controlling the stories told to future guardians?",
+    "expected_answer": "Establish censorship of fiction: accept good tales, reject bad ones, and have mothers and nurses tell children only the authorised stories.",
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 61,
+        "evidence": "Then the first thing will be to establish a censorship of the writers of fiction, and let the censors receive any tale of fiction which is good, and reject the bad",
+        "unit_id": "rep-b2-u024"
+      }
+    ],
+    "filter": null,
+    "type": "direct",
+    "gold_unit_id": "rep-b2-u024",
+    "gold_book": 2,
+    "leakage_risk": "The proposal is stated explicitly; the question does not require linking it to later censorship examples."
+  },
+  {
+    "id": "q12",
+    "split": "dev",
+    "question": "What are the three parts of a song or ode, according to Socrates?",
+    "expected_answer": "The words, the melody, and the rhythm.",
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 86,
+        "evidence": "a song or ode has three parts—the words, the melody, and the rhythm",
+        "unit_id": "rep-b3-u018"
+      }
+    ],
+    "filter": null,
+    "type": "direct",
+    "gold_unit_id": "rep-b3-u018",
+    "gold_book": 3,
+    "leakage_risk": "A short explicit list; very easy for lexical retrieval."
+  },
+  {
+    "id": "q13",
+    "split": "dev",
+    "question": "Which two harmonies does Glaucon say remain after the unsuitable harmonies are banished?",
+    "expected_answer": "The Dorian and Phrygian harmonies.",
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 86,
+        "evidence": "the Dorian and the Phrygian are the only ones which you have left.",
+        "unit_id": "rep-b3-u018"
+      }
+    ],
+    "filter": {
+      "book": 3
+    },
+    "type": "direct",
+    "gold_unit_id": "rep-b3-u018",
+    "gold_book": 3,
+    "leakage_risk": "The filter narrows to Book III (43 units); the answer is a short explicit list and may be easy for lexical retrieval."
+  },
+  {
+    "id": "q14",
+    "split": "test",
+    "question": "What does Socrates say happens to a guardian who indulges excessively in music?",
+    "expected_answer": "His spirit is softened and wasted; he becomes a feeble warrior, irritable and passionate rather than courageous.",
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 103,
+        "evidence": "if he carries on the softening and soothing process, in the next stage he begins to melt and waste, until he has wasted away his spirit and cut out the sinews of his soul; and he becomes a feeble warrior.",
+        "unit_id": "rep-b3-u035"
+      }
+    ],
+    "filter": null,
+    "type": "condition_exception",
+    "gold_unit_id": "rep-b3-u035",
+    "gold_book": 3,
+    "leakage_risk": "The question asks for the consequence of excess, not the general value of music; the quote states the result but not the remedy."
+  },
+  {
+    "id": "q15",
+    "split": "dev",
+    "question": "Why does Socrates restrict what guardians may imitate?",
+    "expected_answer": "Because imitation practised from youth becomes habit and second nature; guardians should imitate only characters suitable to their profession, lest they become what they imitate.",
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 81,
+        "evidence": "lest from imitation they should come to be what they imitate.",
+        "unit_id": "rep-b3-u013"
+      }
+    ],
+    "filter": null,
+    "type": "paraphrase",
+    "gold_unit_id": "rep-b3-u013",
+    "gold_book": 3,
+    "leakage_risk": "The answer requires understanding the causal warning about habit, not merely matching the word 'imitation'."
+  },
+  {
+    "id": "q16",
+    "split": "dev",
+    "question": "What is the 'royal lie' or noble lie Socrates proposes about the citizens' origin?",
+    "expected_answer": "Citizens are told that their youth and education were a dream; they were formed and fed in the womb of the earth, so the country is their mother and fellow citizens are brothers, and they must defend her.",
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 108,
+        "evidence": "They are to be told that their youth was a dream, and the education and training which they received from us, an appearance only; in reality during all that time they were being formed and fed in the womb of the earth, where they themselves and their arms and appurtenances were manufactured; when they were completed, the earth, their mother, sent them up; and so, their country being their mother and also their nurse, they are bound to advise for her good, and to defend her against attacks, and her citizens they are to regard as children of the earth and their own brothers.",
+        "unit_id": "rep-b3-u040"
+      }
+    ],
+    "filter": null,
+    "type": "direct",
+    "gold_unit_id": "rep-b3-u040",
+    "gold_book": 3,
+    "leakage_risk": "The source uses 'royal lie' rather than 'noble lie'; the question supplies the synonym to test paraphrase robustness."
+  },
+  {
+    "id": "q17",
+    "split": "dev",
+    "question": "In the myth of the metals, which metal corresponds to each class?",
+    "expected_answer": "Gold corresponds to the rulers; silver to the auxiliaries; brass and iron to the husbandmen and craftsmen.",
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 109,
+        "evidence": "Some of you have the power of command, and in the composition of these he has mingled gold, wherefore also they have the greatest honour; others he has made of silver, to be auxiliaries; others again who are to be husbandmen and craftsmen he has composed of brass and iron",
+        "unit_id": "rep-b3-u041"
+      }
+    ],
+    "filter": null,
+    "type": "direct",
+    "gold_unit_id": "rep-b3-u041",
+    "gold_book": 3,
+    "leakage_risk": "The mapping is explicit; the question tests whether the retriever returns the whole list rather than a single metal mention."
+  },
+  {
+    "id": "q18",
+    "split": "test",
+    "question": "Does the myth of the metals make class membership strictly hereditary? Explain the exception.",
+    "expected_answer": "No. A golden parent may have a silver son and a silver parent a golden son; if a child of golden or silver parents has brass or iron in him, the rulers must transpose ranks. An oracle says a brass or iron guardian will destroy the state.",
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 109,
+        "evidence": "if the son of a golden or silver parent has an admixture of brass and iron, then nature orders a transposition of ranks",
+        "unit_id": "rep-b3-u041"
+      }
+    ],
+    "filter": {
+      "book": 3
+    },
+    "type": "condition_exception",
+    "gold_unit_id": "rep-b3-u041",
+    "gold_book": 3,
+    "leakage_risk": "The filter narrows to Book III; the exception is explicit but requires reading the surrounding rule about hereditary metals."
+  },
+  {
+    "id": "q19",
+    "split": "dev",
+    "question": "Why does Socrates say the guardians should have no private property or gold and silver?",
+    "expected_answer": "To prevent them from becoming housekeepers, husbandmen, enemies and tyrants instead of guardians; private property would make them prey on citizens and ruin the state.",
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 111,
+        "evidence": "none of them should have any property of his own beyond what is absolutely necessary",
+        "unit_id": "rep-b3-u043"
+      }
+    ],
+    "filter": null,
+    "type": "direct",
+    "gold_unit_id": "rep-b3-u043",
+    "gold_book": 3,
+    "leakage_risk": "The answer is stated as a rationale at the end of Book III; the quote supports the prohibition but the consequence is in the surrounding sentence."
+  },
+  {
+    "id": "q20",
+    "split": "dev",
+    "question": "How are the future rulers and guardians selected and tested?",
+    "expected_answer": "They are watched from youth and made to perform actions where they might forget or be deceived; those who remember and are not deceived are selected, and failures are rejected.",
+    "gold": [
+      {
+        "source_id": "plato-republic-1497",
+        "page": 107,
+        "evidence": "We must watch them from their youth upwards, and make them perform actions in which they are most likely to forget or to be deceived, and he who remembers and is not deceived is to be selected, and he who fails in the trial is to be rejected.",
+        "unit_id": "rep-b3-u039"
+      }
+    ],
+    "filter": null,
+    "type": "direct",
+    "gold_unit_id": "rep-b3-u039",
+    "gold_book": 3,
+    "leakage_risk": "The selection process spans several sentences; the quote covers the core test but not every detail of the trials."
+  }
+]

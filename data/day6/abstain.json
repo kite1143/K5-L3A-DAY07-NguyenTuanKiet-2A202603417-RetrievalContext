@@ -1,0 +1,93 @@
+[
+  {
+    "id": "a01",
+    "split": "dev",
+    "question": "How old is Socrates when he talks with Cephalus in the Piraeus?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Corpus chỉ nói về tuổi già của Cephalus và nỗi sợ sau khi chết, không nêu tuổi của Socrates hay bất kỳ con số tuổi nào của người kể chuyện.",
+    "topic_terms": [
+      "old",
+      "age",
+      "years",
+      "Socrates",
+      "Cephalus",
+      "Piraeus"
+    ],
+    "near_topic_units": [
+      "rep-b1-u005",
+      "rep-b1-u001"
+    ],
+    "check_method": "keyword scan + TF-IDF top-5, đối chiếu thủ công từng hit; xem data/day6/abstain_checks.json",
+    "review": {
+      "decision": "confirmed_absent",
+      "note": "Đọc top-5 lexical và dense: các unit chỉ nói tuổi già của Cephalus, không nêu tuổi Socrates."
+    }
+  },
+  {
+    "id": "a02",
+    "split": "dev",
+    "question": "What are the three waves of paradox in Book V, and which one does Socrates call the greatest?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Corpus chỉ gồm Books I-III; ba làn sóng nghịch lý nằm ở Book V (đã loại khỏi phạm vi), nên không có câu trả lời trong 111 unit.",
+    "topic_terms": [
+      "wave",
+      "paradox",
+      "Book V",
+      "philosopher",
+      "king"
+    ],
+    "near_topic_units": [],
+    "check_method": "keyword scan (0 hit cho 'wave', 'paradox', 'Book V') + TF-IDF top-5; xem data/day6/abstain_checks.json",
+    "review": {
+      "decision": "confirmed_absent",
+      "note": "0 hit cho 'wave'/'paradox'/'Book V'; Books IV-X nằm ngoài phạm vi corpus."
+    }
+  },
+  {
+    "id": "a03",
+    "split": "test",
+    "question": "What is the nuptial number in Book VIII, and how does Socrates compute it?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Nuptial number thuộc Book VIII (ngoài phạm vi Books I-III). Unit rep-b2-u031 có chữ 'nuptial' nhưng nói về đám cưới của Thetis trong thơ Aeschylus, không liên quan tới con số.",
+    "topic_terms": [
+      "nuptial",
+      "number",
+      "Book VIII",
+      "compute"
+    ],
+    "near_topic_units": [
+      "rep-b2-u031"
+    ],
+    "check_method": "keyword scan + TF-IDF top-5; hit 'nuptial' là bẫy từ khoá, đã đọc và xác nhận không trả lời; xem data/day6/abstain_checks.json",
+    "review": {
+      "decision": "confirmed_absent",
+      "note": "'nuptial' chỉ xuất hiện ở rep-b2-u031 (đám cưới Thetis), không phải nuptial number của Book VIII."
+    }
+  },
+  {
+    "id": "a04",
+    "split": "test",
+    "question": "What is the exact total number of guardians Socrates says the ideal city needs?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Books I-III bàn nhiều về phẩm chất, giáo dục và việc chọn guardian nhưng không nêu tổng số guardian của thành bang; không có câu nào chứa con số tổng.",
+    "topic_terms": [
+      "guardians",
+      "number",
+      "city",
+      "how many"
+    ],
+    "near_topic_units": [
+      "rep-b2-u021",
+      "rep-b3-u040"
+    ],
+    "check_method": "keyword scan cho 'guardians' (22 hit) + kiểm tra mọi chỗ có số gần 'guardian' + TF-IDF top-5; xem data/day6/abstain_checks.json",
+    "review": {
+      "decision": "confirmed_absent",
+      "note": "22 hit 'guardian(s)' nhưng mọi đoạn bàn phẩm chất/giáo dục/chọn lọc, không có tổng số."
+    }
+  }
+]

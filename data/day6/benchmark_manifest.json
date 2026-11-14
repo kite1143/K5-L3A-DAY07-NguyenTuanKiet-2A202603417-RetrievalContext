@@ -1,0 +1,39 @@
+{
+  "benchmark_version": "day7-v1",
+  "frozen_at": "2026-11-14T08:26:37+00:00",
+  "status": "frozen",
+  "files": {
+    "chunks.json": {
+      "sha256": "A992A168FFE47E29B723D4609DDE2F454E71A332EAA7C1F3FD5C67AAC33C460B"
+    },
+    "questions.json": {
+      "sha256": "A7D1F86848EDC58A31C71A41F6DBD1373AF560CB0326A86B3D3AFA6BFB75B682"
+    },
+    "abstain.json": {
+      "sha256": "19390DCA9B585783B8C336E5D1152A2C0108B8232639A40259EA12F278F9712D"
+    }
+  },
+  "counts": {
+    "answerable": 20,
+    "answerable_dev": 15,
+    "answerable_test": 5,
+    "abstain": 4,
+    "abstain_dev": 2,
+    "abstain_test": 2,
+    "total": 24
+  },
+  "policy": {
+    "test_creation": "Test kế thừa từ Day 6 (5 câu) cộng 2 câu thiếu evidence; tạo xong mới chạy pipeline.",
+    "no_tuning_on_test": "Test chỉ chạy sau khi chốt cấu hình trên dev; nếu buộc phải chỉnh, tạo benchmark v2 và báo riêng.",
+    "abstain_excluded_from_retrieval": "Câu thiếu evidence không vào mẫu số Hit@1 / Evidence Hit@3.",
+    "filter_policy": "Chỉ dùng metadata book, cấp trước khi truy xuất, không chứa unit/page gold."
+  },
+  "derivation": {
+    "day6_source": "data/day6/raw/questions.jsonl (20 câu, 15 dev / 5 test)",
+    "added_by_day7": "data/day6/abstain.json (4 câu thiếu evidence: 2 dev, 2 test)",
+    "verified_by": [
+      "src/validate_benchmark.py",
+      "src/check_absence.py -> data/day6/abstain_checks.json"
+    ]
+  }
+}

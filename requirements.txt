@@ -1,0 +1,8 @@
+# Day 7 — môi trường để nối vector store Day 6 (dense retrieval) và tạo embedding.
+# Phiên bản pin theo lock file Day 6: artifacts/day6/rebuild/requirements.lock.txt
+# Cài trên máy bình thường:
+#   python -m venv .venv
+#   .venv\Scripts\python.exe -m pip install -r requirements.txt
+chromadb==1.5.9
+fastembed==0.9.1
+numpy==2.5.4

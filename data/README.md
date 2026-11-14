@@ -7,3 +7,14 @@ Các file `example_*.json` chỉ minh họa định dạng, không đủ để n
 - **Câu thiếu evidence:** `id`, `split`, `question`, `answerable: false`, `expected_behavior: "search_and_abstain"`, `absence_reason`. Xem `agent_cases_example.json`.
 
 Không đưa `gold` hoặc nhãn đáp án vào model và retrieval tool. Ghi nguồn dữ liệu và quyền sử dụng. Cách chuyển một số định dạng Day 6: [starter/README.md](../starter/README.md).
+## Dữ liệu dùng trong bài
+
+Bộ dữ liệu thật nằm ở [`day6/`](day6/), chuyển từ Lab_06 (Plato, *The Republic*, Books I–III, Project Gutenberg #1497 — public domain):
+
+- [`day6/chunks.json`](day6/chunks.json) — 111 chunk, schema Day 7.
+- [`day6/questions.json`](day6/questions.json) — 20 câu có đáp án (15 dev / 5 test).
+- [`day6/abstain.json`](day6/abstain.json) — 4 câu thiếu evidence (2 dev / 2 test).
+- [`day6/manifest.json`](day6/manifest.json) — nguồn, sha256, embedding và store.
+- [`day6/benchmark_manifest.json`](day6/benchmark_manifest.json) — hash đóng băng của benchmark.
+
+Cách chuyển và giới hạn: [docs/DAY6_CONNECTION.md](../docs/DAY6_CONNECTION.md). Quy ước chấm: [docs/BENCHMARK_DAY7.md](../docs/BENCHMARK_DAY7.md).

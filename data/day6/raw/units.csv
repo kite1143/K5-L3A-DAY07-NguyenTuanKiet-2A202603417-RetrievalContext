@@ -1,0 +1,112 @@
+unit_id,document_id,book,book_title,section,language,page,start_char,end_char,char_count,first_80_chars
+rep-b1-u001,plato-republic-1497,1,BOOK I,BOOK I,en,1,0,1518,1518,"I went down yesterday to the Piraeus with Glaucon the son of Ariston, that I mig"
+rep-b1-u002,plato-republic-1497,1,BOOK I,BOOK I,en,2,1520,3337,1817,"Certainly not, replied Glaucon. Then we are not going to listen; of that you ma"
+rep-b1-u003,plato-republic-1497,1,BOOK I,BOOK I,en,3,3339,5512,2173,"I replied: There is nothing which for my part I like better, Cephalus, than conv"
+rep-b1-u004,plato-republic-1497,1,BOOK I,BOOK I,en,4,5514,7587,2073,"I listened in admiration, and wanting to draw him out, that he might go on—Yes,"
+rep-b1-u005,plato-republic-1497,1,BOOK I,BOOK I,en,5,7589,9467,1878,"That is true, he said. Yes, that is very true, but may I ask another question?—"
+rep-b1-u006,plato-republic-1497,1,BOOK I,BOOK I,en,6,9469,11033,1564,"Well said, Cephalus, I replied; but as concerning justice, what is it?—to speak"
+rep-b1-u007,plato-republic-1497,1,BOOK I,BOOK I,en,7,11035,12561,1526,True. Then when the person who asks me is not in his right mind I am by no mean
+rep-b1-u008,plato-republic-1497,1,BOOK I,BOOK I,en,8,12563,14253,1690,That is his meaning then? I think so. And who is best able to do good to his f
+rep-b1-u009,plato-republic-1497,1,BOOK I,BOOK I,en,9,14255,15991,1736,"Certainly. And when you want to buy a ship, the shipwright or the pilot would b"
+rep-b1-u010,plato-republic-1497,1,BOOK I,BOOK I,en,10,15993,17601,1608,"‘He was excellent above all men in theft and perjury.’ And so, you and Homer an"
+rep-b1-u011,plato-republic-1497,1,BOOK I,BOOK I,en,11,17603,19159,1556,"What was the error, Polemarchus? I asked. We assumed that he is a friend who se"
+rep-b1-u012,plato-republic-1497,1,BOOK I,BOOK I,en,12,19161,20908,1747,Assuredly not. Any more than heat can produce cold? It cannot. Or drought moi
+rep-b1-u013,plato-republic-1497,1,BOOK I,BOOK I,en,13,20910,22464,1554,"He roared out to the whole company: What folly, Socrates, has taken possession o"
+rep-b1-u014,plato-republic-1497,1,BOOK I,BOOK I,en,14,22466,24032,1566,"How characteristic of Socrates! he replied, with a bitter laugh;—that’s your iro"
+rep-b1-u015,plato-republic-1497,1,BOOK I,BOOK I,en,15,24034,25575,1541,"What, and no payment! a pleasant notion! I will pay when I have the money, I re"
+rep-b1-u016,plato-republic-1497,1,BOOK I,BOOK I,en,16,25577,27221,1644,"Listen, then, he said; I proclaim that justice is nothing else than the interest"
+rep-b1-u017,plato-republic-1497,1,BOOK I,BOOK I,en,17,27223,28827,1604,"Now I understand you, I said; and whether you are right or not I will try to dis"
+rep-b1-u018,plato-republic-1497,1,BOOK I,BOOK I,en,18,28829,30518,1689,Yes. Then you must also have acknowledged justice not to be for the interest of
+rep-b1-u019,plato-republic-1497,1,BOOK I,BOOK I,en,19,30520,32032,1512,"Certainly not, he said. Do you suppose that I call him who is mistaken the stron"
+rep-b1-u020,plato-republic-1497,1,BOOK I,BOOK I,en,20,32034,33619,1585,And do you suppose that I ask these questions with any design of injuring you in
+rep-b1-u021,plato-republic-1497,1,BOOK I,BOOK I,en,21,33621,35215,1594,"Very true, he said. Now, I said, every art has an interest? Certainly. For wh"
+rep-b1-u022,plato-republic-1497,1,BOOK I,BOOK I,en,22,35217,36844,1627,"Yes, clearly. Then medicine does not consider the interest of medicine, but the"
+rep-b1-u023,plato-republic-1497,1,BOOK I,BOOK I,en,23,36846,40395,3549,"When we had got to this point in the argument, and every one saw that the defini"
+rep-b1-u024,plato-republic-1497,1,BOOK I,BOOK I,en,24,40397,41978,1581,"Thrasymachus, when he had thus spoken, having, like a bath-man, deluged our ears"
+rep-b1-u025,plato-republic-1497,1,BOOK I,BOOK I,en,25,41980,43717,1737,"And how am I to convince you, he said, if you are not already convinced by what"
+rep-b1-u026,plato-republic-1497,1,BOOK I,BOOK I,en,26,43719,45450,1731,"Yes, that is the difference, he replied. And each art gives us a particular goo"
+rep-b1-u027,plato-republic-1497,1,BOOK I,BOOK I,en,27,45452,48687,3235,I suppose not. But does he therefore confer no benefit when he works for nothin
+rep-b1-u028,plato-republic-1497,1,BOOK I,BOOK I,en,28,48689,50230,1541,"I for my part deem the life of the just to be the more advantageous, he answered"
+rep-b1-u029,plato-republic-1497,1,BOOK I,BOOK I,en,29,50232,51775,1543,No; I would rather say discretion. And do the unjust appear to you to be wise a
+rep-b1-u030,plato-republic-1497,1,BOOK I,BOOK I,en,30,51777,53317,1540,"Very true, I said; that is what I have to do: But will you be so good as answer"
+rep-b1-u031,plato-republic-1497,1,BOOK I,BOOK I,en,31,53319,54886,1567,"Each of them, I said, is such as his like is? Certainly, he replied. Very good"
+rep-b1-u032,plato-republic-1497,1,BOOK I,BOOK I,en,32,54888,56463,1575,I suppose so. Whereas the bad and ignorant will desire to gain more than both?
+rep-b1-u033,plato-republic-1497,1,BOOK I,BOOK I,en,33,56465,58081,1616,"Nothing in the world, I said; and if you are so disposed I will ask and you shal"
+rep-b1-u034,plato-republic-1497,1,BOOK I,BOOK I,en,34,58083,59692,1609,"No indeed, he said, they could not. But if they abstained from injuring one ano"
+rep-b1-u035,plato-republic-1497,1,BOOK I,BOOK I,en,35,59694,61240,1546,"Yes. And O my friend, I said, surely the gods are just? Granted that they are."
+rep-b1-u036,plato-republic-1497,1,BOOK I,BOOK I,en,36,61242,62937,1695,I should. And the end or use of a horse or of anything would be that which coul
+rep-b1-u037,plato-republic-1497,1,BOOK I,BOOK I,en,37,62939,65304,2365,"Certainly, he replied. I might say the same of the ears; when deprived of their"
+rep-b2-u001,plato-republic-1497,2,BOOK II,BOOK II,en,38,0,1624,1624,With these words I was thinking that I had made an end of the discussion; but th
+rep-b2-u002,plato-republic-1497,2,BOOK II,BOOK II,en,39,1626,3666,2040,Then the many are of another mind; they think that justice is to be reckoned in
+rep-b2-u003,plato-republic-1497,2,BOOK II,BOOK II,en,40,3668,8430,4762,Indeed I do; nor can I imagine any theme about which a man of sense would oftene
+rep-b2-u004,plato-republic-1497,2,BOOK II,BOOK II,en,41,8432,10657,2225,"Now, if we are to form a real judgment of the life of the just and unjust, we mu"
+rep-b2-u005,plato-republic-1497,2,BOOK II,BOOK II,en,42,10659,12589,1930,"Heavens! my dear Glaucon, I said, how energetically you polish them up for the d"
+rep-b2-u006,plato-republic-1497,2,BOOK II,BOOK II,en,43,12591,14209,1618,"I was going to say something in answer to Glaucon, when Adeimantus, his brother,"
+rep-b2-u007,plato-republic-1497,2,BOOK II,BOOK II,en,44,14211,16937,2726,and many other blessings of a like kind are provided for them. And Homer has a v
+rep-b2-u008,plato-republic-1497,2,BOOK II,BOOK II,en,45,16939,18459,1520,‘Vice may be had in abundance without trouble; the way is smooth and her dwellin
+rep-b2-u009,plato-republic-1497,2,BOOK II,BOOK II,en,46,18461,20921,2460,‘Can I by justice or by crooked ways of deceit ascend a loftier tower which may
+rep-b2-u010,plato-republic-1497,2,BOOK II,BOOK II,en,47,20923,25231,4308,"On what principle, then, shall we any longer choose justice rather than the wors"
+rep-b2-u011,plato-republic-1497,2,BOOK II,BOOK II,en,48,25233,27478,2245,"I had always admired the genius of Glaucon and Adeimantus, but on hearing these"
+rep-b2-u012,plato-republic-1497,2,BOOK II,BOOK II,en,49,27480,29108,1628,"Very true, said Adeimantus; but how does the illustration apply to our enquiry?"
+rep-b2-u013,plato-republic-1497,2,BOOK II,BOOK II,en,50,29110,30663,1553,"True, he said. And they exchange with one another, and one gives, and another r"
+rep-b2-u014,plato-republic-1497,2,BOOK II,BOOK II,en,51,30665,32219,1554,"Probably, I replied, that would be the better way; and when I hear you say this,"
+rep-b2-u015,plato-republic-1497,2,BOOK II,BOOK II,en,52,32221,33775,1554,That is true; yet neither will it be a very small State which contains all these
+rep-b2-u016,plato-republic-1497,2,BOOK II,BOOK II,en,53,33777,36085,2308,"Not at all; he will find people there who, seeing the want, undertake the office"
+rep-b2-u017,plato-republic-1497,2,BOOK II,BOOK II,en,54,36087,37939,1852,"But, said Glaucon, interposing, you have not given them a relish to their meal."
+rep-b2-u018,plato-republic-1497,2,BOOK II,BOOK II,en,55,37941,39646,1705,"True, he said. Then we must enlarge our borders; for the original healthy State"
+rep-b2-u019,plato-republic-1497,2,BOOK II,BOOK II,en,56,39648,41430,1782,Undoubtedly. And our State must once more enlarge; and this time the enlargemen
+rep-b2-u020,plato-republic-1497,2,BOOK II,BOOK II,en,57,41432,42971,1539,"Yes, he said, the tools which would teach men their own use would be beyond pric"
+rep-b2-u021,plato-republic-1497,2,BOOK II,BOOK II,en,58,42973,44533,1560,"Whereas, I said, they ought to be dangerous to their enemies, and gentle to thei"
+rep-b2-u022,plato-republic-1497,2,BOOK II,BOOK II,en,59,44535,46097,1562,"What trait? Why, a dog, whenever he sees a stranger, is angry; when an acquaint"
+rep-b2-u023,plato-republic-1497,2,BOOK II,BOOK II,en,60,46099,47651,1552,"Then, I said, my dear friend, the task must not be given up, even if somewhat lo"
+rep-b2-u024,plato-republic-1497,2,BOOK II,BOOK II,en,61,47653,49675,2022,We cannot. Then the first thing will be to establish a censorship of the writer
+rep-b2-u025,plato-republic-1497,2,BOOK II,BOOK II,en,62,49677,51561,1884,"Why, yes, said he, those stories are extremely objectionable. Yes, Adeimantus,"
+rep-b2-u026,plato-republic-1497,2,BOOK II,BOOK II,en,63,51563,53070,1507,"There you are right, he replied; but if any one asks where are such models to be"
+rep-b2-u027,plato-republic-1497,2,BOOK II,BOOK II,en,64,53072,54956,1884,"That appears to me to be most true, he said. Then we must not listen to Homer o"
+rep-b2-u028,plato-republic-1497,2,BOOK II,BOOK II,en,65,54958,56558,1600,"I agree with you, he replied, and am ready to give my assent to the law. Let th"
+rep-b2-u029,plato-republic-1497,2,BOOK II,BOOK II,en,66,56560,58250,1690,True. But surely God and the things of God are in every way perfect? Of course
+rep-b2-u030,plato-republic-1497,2,BOOK II,BOOK II,en,67,58252,60211,1959,"Heaven forbid, he said. But although the gods are themselves unchangeable, stil"
+rep-b2-u031,plato-republic-1497,2,BOOK II,BOOK II,en,68,60213,62297,2084,"Very true, he said. But can any of these reasons apply to God? Can we suppose t"
+rep-b3-u001,plato-republic-1497,3,BOOK III,BOOK III,en,69,0,1502,1502,"Such then, I said, are our principles of theology—some tales are to be told, and"
+rep-b3-u002,plato-republic-1497,3,BOOK III,BOOK III,en,70,1504,3028,1524,"Again of Tiresias:— ‘(To him even after death did Persephone grant mind,) that"
+rep-b3-u003,plato-republic-1497,3,BOOK III,BOOK III,en,71,3030,4731,1701,Clearly. And shall we proceed to get rid of the weepings and wailings of famous
+rep-b3-u004,plato-republic-1497,3,BOOK III,BOOK III,en,72,4733,6361,1628,"‘Rolling in the dirt, calling each man loudly by his name.’ Still more earnestl"
+rep-b3-u005,plato-republic-1497,3,BOOK III,BOOK III,en,73,6363,7900,1537,"Still less of the gods, as you say, he replied. Then we shall not suffer such a"
+rep-b3-u006,plato-republic-1497,3,BOOK III,BOOK III,en,74,7902,9426,1524,he will punish him for introducing a practice which is equally subversive and de
+rep-b3-u007,plato-republic-1497,3,BOOK III,BOOK III,en,75,9428,11046,1618,"What would you say again to the tale of Zeus, who, while other gods and men were"
+rep-b3-u008,plato-republic-1497,3,BOOK III,BOOK III,en,76,11048,13073,2025,"Undoubtedly, he said, these are not sentiments which can be approved. Loving Ho"
+rep-b3-u009,plato-republic-1497,3,BOOK III,BOOK III,en,77,13075,14660,1585,Assuredly not. And further they are likely to have a bad effect on those who he
+rep-b3-u010,plato-republic-1497,3,BOOK III,BOOK III,en,78,14662,16545,1883,I grant the truth of your inference. That such things are or are not to be said
+rep-b3-u011,plato-republic-1497,3,BOOK III,BOOK III,en,79,16547,18846,2299,Yes. And a narrative it remains both in the speeches which the poet recites fro
+rep-b3-u012,plato-republic-1497,3,BOOK III,BOOK III,en,80,18848,20556,1708,"I understand, he said. Or you may suppose the opposite case—that the intermedia"
+rep-b3-u013,plato-republic-1497,3,BOOK III,BOOK III,en,81,20558,22370,1812,Certainly. And this is equally true of imitation; no one man can imitate many t
+rep-b3-u014,plato-republic-1497,3,BOOK III,BOOK III,en,82,22372,24066,1694,"Yes, certainly, he said. Then, I said, we will not allow those for whom we prof"
+rep-b3-u015,plato-republic-1497,3,BOOK III,BOOK III,en,83,24068,26026,1958,"And which are these two sorts? he asked. Suppose, I answered, that a just and g"
+rep-b3-u016,plato-republic-1497,3,BOOK III,BOOK III,en,84,26028,27596,1568,"That, he said, will be his mode of speaking. These, then, are the two kinds of"
+rep-b3-u017,plato-republic-1497,3,BOOK III,BOOK III,en,85,27598,29218,1620,"Yes; quite unsuitable. And this is the reason why in our State, and in our Stat"
+rep-b3-u018,plato-republic-1497,3,BOOK III,BOOK III,en,86,29220,31624,2404,"At any rate you can tell that a song or ode has three parts—the words, the melod"
+rep-b3-u019,plato-republic-1497,3,BOOK III,BOOK III,en,87,31626,33398,1772,"And these, he replied, are the Dorian and Phrygian harmonies of which I was just"
+rep-b3-u020,plato-republic-1497,3,BOOK III,BOOK III,en,88,33400,35149,1749,"But, indeed, he replied, I cannot tell you. I only know that there are some thre"
+rep-b3-u021,plato-republic-1497,3,BOOK III,BOOK III,en,89,35151,37872,2721,"Rather so, I should say. But there is no difficulty in seeing that grace or the"
+rep-b3-u022,plato-republic-1497,3,BOOK III,BOOK III,en,90,37874,39447,1573,"There can be no nobler training than that, he replied. And therefore, I said, G"
+rep-b3-u023,plato-republic-1497,3,BOOK III,BOOK III,en,91,39449,40961,1512,"Exactly— Even so, as I maintain, neither we nor our guardians, whom we have to"
+rep-b3-u024,plato-republic-1497,3,BOOK III,BOOK III,en,92,40963,42526,1563,"No, nor a madder. Whereas true love is a love of beauty and order—temperate and"
+rep-b3-u025,plato-republic-1497,3,BOOK III,BOOK III,en,93,42528,44032,1504,"Yes, I agree. Then, to the mind when adequately trained, we shall be right in h"
+rep-b3-u026,plato-republic-1497,3,BOOK III,BOOK III,en,94,44034,45595,1561,"How so? Why, I conceive that there is a gymnastic which, like our music, is sim"
+rep-b3-u027,plato-republic-1497,3,BOOK III,BOOK III,en,95,45597,47193,1596,"Most true, he said. But when intemperance and diseases multiply in a State, hal"
+rep-b3-u028,plato-republic-1497,3,BOOK III,BOOK III,en,96,47195,48747,1552,"Yes, he said, that is still more disgraceful. Well, I said, and to require the"
+rep-b3-u029,plato-republic-1497,3,BOOK III,BOOK III,en,97,48749,50428,1679,How was that? he said. By the invention of lingering death; for he had a mortal
+rep-b3-u030,plato-republic-1497,3,BOOK III,BOOK III,en,98,50430,52148,1718,"Yes, he said, and a man in his condition of life ought to use the art of medicin"
+rep-b3-u031,plato-republic-1497,3,BOOK III,BOOK III,en,99,52150,53913,1763,"Yes, likely enough. And therefore our politic Asclepius may be supposed to have"
+rep-b3-u032,plato-republic-1497,3,BOOK III,BOOK III,en,100,53915,55618,1703,"They were very acute persons, those sons of Asclepius. Naturally so, I replied."
+rep-b3-u033,plato-republic-1497,3,BOOK III,BOOK III,en,101,55620,57448,1828,"That is very true, he said. But with the judge it is otherwise; since he govern"
+rep-b3-u034,plato-republic-1497,3,BOOK III,BOOK III,en,102,57450,59037,1587,"Most true, he said. Then the good and wise judge whom we are seeking is not thi"
+rep-b3-u035,plato-republic-1497,3,BOOK III,BOOK III,en,103,59039,60765,1726,"How can that be? he asked. Did you never observe, I said, the effect on the min"
+rep-b3-u036,plato-republic-1497,3,BOOK III,BOOK III,en,104,60767,62421,1654,Very true. If the element of spirit is naturally weak in him the change is spee
+rep-b3-u037,plato-republic-1497,3,BOOK III,BOOK III,en,105,62423,64062,1639,That appears to be the intention. And he who mingles music with gymnastic in th
+rep-b3-u038,plato-republic-1497,3,BOOK III,BOOK III,en,106,64064,65685,1621,"Very true, he replied. Then there must be a selection. Let us note among the gu"
+rep-b3-u039,plato-republic-1497,3,BOOK III,BOOK III,en,107,65687,67903,2216,"Yes. Those again who are forced, are those whom the violence of some pain or gr"
+rep-b3-u040,plato-republic-1497,3,BOOK III,BOOK III,en,108,67905,69874,1969,"And, speaking generally, I agree with you, he said. And perhaps the word ‘guard"
+rep-b3-u041,plato-republic-1497,3,BOOK III,BOOK III,en,109,69876,71446,1570,"You had good reason, he said, to be ashamed of the lie which you were going to t"
+rep-b3-u042,plato-republic-1497,3,BOOK III,BOOK III,en,110,71448,73029,1581,"Not in the present generation, he replied; there is no way of accomplishing this"
+rep-b3-u043,plato-republic-1497,3,BOOK III,BOOK III,en,111,73031,75542,2511,"Yes, great care should be taken. And would not a really good education furnish"

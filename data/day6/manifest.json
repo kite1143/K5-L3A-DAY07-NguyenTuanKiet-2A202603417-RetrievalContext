@@ -1,0 +1,91 @@
+{
+  "day7_artifact_version": 1,
+  "generated_at": "2026-11-14T08:33:01+00:00",
+  "generated_by": "src/adapt_day6.py",
+  "upstream": {
+    "lab": "Day 6 — Retrieval & Vector Store (repo Lab_06)",
+    "corpus_id": "plato-republic-books-1-3",
+    "corpus_file": "data/day6/raw/corpus.jsonl",
+    "corpus_sha256": "1D341892EF17FA6556777B2595233D65D94601C1D8C5DC186777B571DA45899C",
+    "questions_file": "data/day6/raw/questions.jsonl",
+    "questions_sha256": "DDF617ECB8558CDD725E75DCF840CE27C370EBC15BC85F3306C8ED9629811986"
+  },
+  "source_document": {
+    "source_id": "plato-republic-1497",
+    "title": "The Republic",
+    "author": "Plato",
+    "translator": "Benjamin Jowett",
+    "url": "https://www.gutenberg.org/ebooks/1497",
+    "license": "Public domain in the USA; Project Gutenberg License",
+    "included_scope": "Books I-III"
+  },
+  "counts": {
+    "chunks": 111,
+    "characters": 202927,
+    "min_chars": 1502,
+    "max_chars": 4762,
+    "chunks_by_book": {
+      "1": 37,
+      "2": 31,
+      "3": 43
+    },
+    "questions": 20,
+    "questions_by_split": {
+      "dev": 15,
+      "test": 5
+    },
+    "questions_by_type": {
+      "condition_exception": 3,
+      "direct": 13,
+      "paraphrase": 4
+    },
+    "questions_with_filter": 5
+  },
+  "page_definition": "page = thứ tự unit trong corpus (1..N). Nguồn là text Gutenberg không có số trang in, nên Day 7 giữ nguyên quy ước Day 6 và không bịa số trang giấy.",
+  "embedding": {
+    "provider": "fastembed",
+    "model": "BAAI/bge-small-en-v1.5",
+    "dimensions": 384,
+    "normalized": true,
+    "query_prefix": "none (bge-small-en-v1.5 dùng query_embed/passage_embed của fastembed)"
+  },
+  "store": {
+    "backend": "chromadb",
+    "version": "1.5.9",
+    "path": "artifacts/day6/chroma",
+    "metric": "cosine",
+    "collections": {
+      "B": {
+        "name": "republic_B_384",
+        "chunks": 184,
+        "chunking": "paragraph, target 1500/300 chars"
+      },
+      "A": {
+        "name": "republic_A_384",
+        "chunks": 498,
+        "chunking": "fixed 500/50 overlap"
+      }
+    },
+    "note": "Chunk cấp unit dùng cho retrieval bước 3 là collection B; A chỉ là đối chứng chunking của Day 6."
+  },
+  "field_mapping": {
+    "chunk": {
+      "id": "unit_id",
+      "source_id": "document_id",
+      "page": "page (unit index)",
+      "metadata.book": "book",
+      "metadata.section": "section"
+    },
+    "question": {
+      "gold[0].source_id": "gold_source_id",
+      "gold[0].page": "gold_page",
+      "gold[0].evidence": "evidence_quote",
+      "gold[0].unit_id": "gold_unit_id (giữ để truy vết)"
+    }
+  },
+  "limits": [
+    "Một tài liệu duy nhất, tiếng Anh; không có PDF gốc nên không có số trang in.",
+    "Unit dài ~1500 ký tự nên evidence nhiều khả năng nằm trọn trong một chunk; trường hợp bị cắt sẽ ghi riêng khi phân tích lỗi.",
+    "Câu thiếu evidence là phần bổ sung của Day 7, nằm ở data/day6/abstain.json."
+  ]
+}
