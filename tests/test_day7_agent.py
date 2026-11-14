@@ -54,6 +54,47 @@ class ParseTests(unittest.TestCase):
             parse_action('{"action": "search"}')
 
 
+class ToolErrorTests(unittest.TestCase):
+    class FakeRetriever:
+        method = "fake"
+
+        def search(self, query, *, top_k=3, filters=None):
+            return [hit("a")]
+
+    def test_unknown_tool_is_rejected(self):
+        from agent.tools import RetrievalTools, ToolError
+
+        tools = RetrievalTools({"hybrid": self.FakeRetriever()})
+        with self.assertRaises(ToolError):
+            tools.run("web_search", "q", filters=None)
+
+    def test_empty_query_is_rejected(self):
+        from agent.tools import RetrievalTools, ToolError
+
+        tools = RetrievalTools({"hybrid": self.FakeRetriever()})
+        with self.assertRaises(ToolError):
+            tools.run("hybrid_search", "   ", filters=None)
+
+    def test_top_k_bounds_are_enforced(self):
+        from agent.tools import RetrievalTools, ToolError
+
+        tools = RetrievalTools({"hybrid": self.FakeRetriever()}, max_top_k=5)
+        with self.assertRaises(ToolError):
+            tools.run("hybrid_search", "q", filters=None, top_k=99)
+
+    def test_tool_failure_becomes_error_status(self):
+        from agent.tools import RetrievalTools, ToolError
+
+        class Broken(RetrievalTools):
+            def run(self, name, query, *, filters, top_k=None):
+                raise ToolError("vector store offline")
+
+        controller = ScriptedController([{"action": "search", "tool": "hybrid_search", "query": "q"}])
+        result = run_agent("Q?", controller, Broken({}), query_id="q6")
+        self.assertEqual(result["status"], "error")
+        self.assertIn("vector store offline", result["error"])
+
+
 class RepairTests(unittest.TestCase):
     def test_broken_json_is_repaired_once(self):
         from agent.controller import LLMController

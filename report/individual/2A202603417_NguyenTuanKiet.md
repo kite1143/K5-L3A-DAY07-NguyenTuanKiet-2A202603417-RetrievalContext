@@ -55,7 +55,7 @@ Chốt **C2**: `hybrid` (RRF k=60, depth=20) trên 111 unit, `max_searches=3`, `
 
 - **Tool và điều kiện dừng:** ba tool `dense_search`, `lexical_search`, `hybrid_search`; model chọn tool và query, **filter do harness cấp từ câu hỏi** nên không thể tự suy ra gold. Dừng khi: model trả `answer` có citation hợp lệ; model trả `abstain`; hết `max_searches=3`; hết `max_steps=5`; hoặc citation không nằm trong context (→ abstain, không trả lời).
 - **Chọn context:** dedup theo id, giữ thứ tự hạng qua các lượt search, đóng gói block `[id | source | page N]` cho tới khi đầy budget 6.000 ký tự; không cắt giữa câu ở cấu hình chốt. Đã đo context budget 800 của starter: **Context Evidence Rate 0/15** vì unit dài hơn budget, nên không dùng.
-- **Xử lý lỗi:** lỗi provider/tool → `status='error'` kèm `events[].stage`, không thay bằng câu trả lời giả. Output không phải JSON → thử repair một lần (thêm ở bước 5 vì một ca q19 trả `"...")` thiếu ngoặc), nếu vẫn hỏng thì ghi lỗi.
+- **Xử lý lỗi:** lỗi provider/tool → `status='error'` kèm `events[].stage`, không thay bằng câu trả lời giả. Output không phải JSON → thử repair một lần (thêm ở bước 5 vì một ca q19 trả `"...")` thiếu ngoặc), nếu vẫn hỏng thì ghi lỗi. Retriever từ chối filter lạ, `top_k <= 0`, sai số chiều bằng `ValueError` trước khi truy vấn; 29 unit test phủ các nhánh này.
 
 | Cấu hình / split | Tool use | Số lượt gọi (TB / max) | Grounded 0/1/2, TB | Citation hợp lệ | Câu có citation | Abstention đúng | Từ chối nhầm |
 |---|---|---:|---|---:|---:|---:|---:|
@@ -65,6 +65,8 @@ Chốt **C2**: `hybrid` (RRF k=60, depth=20) trên 111 unit, `max_searches=3`, `
 | C3 / dev | 17/17 | 1,00 / 1 | 2/3/10 — 1,53 | 14/17 | 13/13 | 2/2 | 2/15 |
 | B0 / test | 7/7 | 1,00 / 1 | 2/1/2 — 1,00 | 1/6 | 3/3 | 2/2 | 2/5 |
 | **C2 / test** | 7/7 | 1,14 / 2 | **1/1/3 — 1,40** | 3/6 | 4/4 | 2/2 | **1/5** |
+
+Phân bố số lượt gọi (dev C2): 15 câu 1 lượt, 1 câu 2 lượt, 1 câu 3 lượt; (test C2): 6 câu 1 lượt, 1 câu 2 lượt. Không câu nào vượt `max_searches=3`; 1 ca chạm giới hạn ở dev (q17) và 1 ca ở test (q07 dùng 2 lượt rồi tự trả lời). Lỗi provider/tool xảy ra 1 lần trong quá trình phát triển (q19, JSON hỏng) và được ghi riêng chứ không thay bằng đáp án.
 
 ### Chấm từng câu test (C2)
 

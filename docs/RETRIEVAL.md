@@ -46,7 +46,21 @@ Riêng nhóm có filter (`book`, 3 câu dev): dense 1/3, dense_day6 2/3, bm25 2/
 - **Hybrid có Hit@3 cao nhất (12/15)** nhưng Hit@1 thấp hơn BM25 vì RRF đẩy một số kết quả dense lên đầu. Đổi trọng số/RRF k hoặc dùng dense_day6 làm nhánh dense là hai hướng cải thiện ở bước 5.
 - **Context Evidence Rate thấp hơn Hit@3 ở mọi phương pháp** vì budget 4.000 ký tự chỉ chứa được 2–3 unit, thứ tự ưu tiên theo hạng chứ không theo "unit nào chứa nhiều evidence". Đây là chỗ cải thiện rõ ràng của bước 5 (chọn context theo cửa sổ, không chỉ theo hạng).
 
-## 5. Lệnh chạy
+## 5. Xử lý lỗi
+
+| Tình huống | Hành vi | Kiểm bằng |
+|---|---|---|
+| filter có khoá lạ (ví dụ `page`, `unit_id`) | `ValueError` trước khi truy vấn, không âm thầm bỏ qua | `tests/test_day7_retrieval.py::ErrorHandlingTests::test_filter_validation_rejects_unknown_keys` |
+| `top_k <= 0`, `k1 <= 0`, `b` ngoài [0,1] | `ValueError` khi khởi tạo hoặc khi search | `test_bm25_rejects_invalid_arguments` |
+| corpus rỗng | `ValueError`, không trả ranking giả | cùng test trên |
+| `budget <= 0` hoặc `block_cap <= 0` | `ValueError` | `test_pack_context_rejects_invalid_budget` |
+| sai số chiều embedding | `ValueError` nêu số chiều mong đợi và nhận được | kiểm trong `Embedder` khi dựng index |
+| retriever trả trùng ID hoặc quá `top_k` | `evaluate` dừng với lỗi, không ghi metric sai | `src/retrieval/evaluate.py` |
+| vector store/model không tải được | lỗi lan ra CLI, dừng run; agent ghi `status='error'` | `tests/test_day7_agent.py::ToolErrorTests::test_tool_failure_becomes_error_status` |
+
+Không có nhánh nào thay lỗi bằng kết quả giả.
+
+## 6. Lệnh chạy
 
 ```powershell
 python src/build_index.py                                     # dựng index unit (1 lần)

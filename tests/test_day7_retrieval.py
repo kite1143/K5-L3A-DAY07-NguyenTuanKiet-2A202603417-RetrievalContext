@@ -82,6 +82,35 @@ class ContextTests(unittest.TestCase):
         self.assertEqual(context, "")
 
 
+class ErrorHandlingTests(unittest.TestCase):
+    def test_bm25_rejects_invalid_arguments(self):
+        index = BM25Index([chunk("a", "justice is paying debts")])
+        with self.assertRaises(ValueError):
+            index.search("justice", top_k=0)
+        with self.assertRaises(ValueError):
+            BM25Index([], )
+        with self.assertRaises(ValueError):
+            BM25Index([chunk("a", "x")], k1=0)
+        with self.assertRaises(ValueError):
+            BM25Index([chunk("a", "x")], b=1.5)
+
+    def test_pack_context_rejects_invalid_budget(self):
+        with self.assertRaises(ValueError):
+            pack_context([chunk("a", "x")], budget=0)
+        with self.assertRaises(ValueError):
+            pack_context([chunk("a", "x")], budget=100, block_cap=0)
+
+    def test_filter_validation_rejects_unknown_keys(self):
+        from retrieval.dense import validate_filters
+
+        self.assertIsNone(validate_filters(None))
+        self.assertIsNone(validate_filters({}))
+        self.assertEqual(validate_filters({"book": 2}), {"book": 2})
+        self.assertIsNone(validate_filters({"book": None}))
+        with self.assertRaises(ValueError):
+            validate_filters({"page": 3})
+
+
 class HitTests(unittest.TestCase):
     def test_hit_requires_source_page_and_evidence(self):
         gold = [{"source_id": "doc", "page": 2, "evidence": "private property"}]

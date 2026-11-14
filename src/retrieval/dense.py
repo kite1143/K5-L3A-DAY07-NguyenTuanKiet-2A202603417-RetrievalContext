@@ -17,6 +17,18 @@ MODEL_NAME = "BAAI/bge-small-en-v1.5"
 DIMENSIONS = 384
 DEFAULT_COLLECTION = "day7_units_384"
 DAY6_COLLECTION = "republic_B_384"
+ALLOWED_FILTERS = {"book"}
+
+
+def validate_filters(filters: dict | None) -> dict | None:
+    """Chỉ cho phép filter metadata đã biết; trả None nếu không có filter."""
+    if not filters:
+        return None
+    unknown = set(filters) - ALLOWED_FILTERS
+    if unknown:
+        raise ValueError(f"filter không hỗ trợ: {sorted(unknown)}")
+    cleaned = {key: value for key, value in filters.items() if value is not None}
+    return cleaned or None
 
 
 def normalize(vector) -> list[float]:
@@ -112,12 +124,7 @@ class DenseStore:
         if len(query_vector) != DIMENSIONS:
             raise ValueError(f"query vector phải {DIMENSIONS} chiều")
         collection = self.client.get_collection(self.collection_name)
-        where = None
-        if filters:
-            unknown = set(filters) - {"book"}
-            if unknown:
-                raise ValueError(f"filter không hỗ trợ: {sorted(unknown)}")
-            where = {key: value for key, value in filters.items() if value is not None}
+        where = validate_filters(filters)
         result = collection.query(
             query_embeddings=[query_vector],
             n_results=top_k,
