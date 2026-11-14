@@ -32,6 +32,7 @@ Vì sao không dùng thẳng collection Day 6: chunk Day 6 là paragraph (184 ch
 | dense_day6 (paragraph → unit) | 6/15 — 40,0% | 11/15 — 73,3% | 9/15 — 60,0% | 3.222 | 16,5 |
 | bm25 | **10/15 — 66,7%** | 11/15 — 73,3% | **10/15 — 66,7%** | 3.277 | **1,6** |
 | hybrid RRF | 8/15 — 53,3% | **12/15 — 80,0%** | 9/15 — 60,0% | 3.427 | 32,1 |
+| hybrid_day6 (RRF + nhánh dense paragraph) | 9/15 — 60,0% | **12/15 — 80,0%** | 8/15 — 53,3% | 3.294 | 37,3 |
 
 Số liệu thô: `artifacts/day7/results/dev-*/{summary,traces}.json`; bảng gộp: `artifacts/day7/results/dev-retrieval-comparison.json`.
 

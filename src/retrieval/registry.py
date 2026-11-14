@@ -14,7 +14,7 @@ CHUNKS_PATH = ROOT / "data" / "day6" / "chunks.json"
 STORE_PATH = ROOT / "artifacts" / "day7" / "chroma"
 MODEL_CACHE = ROOT / "artifacts" / "day6" / "fastembed_cache"
 
-METHODS = ("dense", "dense_day6", "bm25", "hybrid")
+METHODS = ("dense", "dense_day6", "bm25", "hybrid", "hybrid_day6")
 
 
 def load_chunks(path: Path = CHUNKS_PATH) -> list[dict]:
@@ -33,8 +33,27 @@ def build_retriever(method: str, *, chunks: list[dict] | None = None):
     embedder = Embedder(cache_dir=MODEL_CACHE)
     if method == "dense_day6":
         return build_day6_retriever(chunks, embedder)
+    if method == "hybrid_day6":
+        return HybridRetriever(
+            build_day6_retriever(chunks, embedder), BM25Index(chunks), method=method
+        )
     store = DenseStore(STORE_PATH)
     dense = DenseRetriever(store, embedder)
     if method == "dense":
         return dense
     return HybridRetriever(dense, BM25Index(chunks))
+
+
+def build_bundle(profile: str = "unit", *, chunks: list[dict] | None = None) -> dict:
+    """Dựng cả ba tool với một embedder dùng chung (tránh nạp model 3 lần)."""
+    if profile not in ("unit", "day6"):
+        raise ValueError("profile phải là 'unit' hoặc 'day6'")
+    chunks = chunks or load_chunks()
+    lexical = BM25Index(chunks)
+    embedder = Embedder(cache_dir=MODEL_CACHE)
+    if profile == "day6":
+        dense = build_day6_retriever(chunks, embedder)
+    else:
+        dense = DenseRetriever(DenseStore(STORE_PATH), embedder)
+    hybrid = HybridRetriever(dense, lexical, method="hybrid_day6" if profile == "day6" else "hybrid")
+    return {"dense": dense, "bm25": lexical, "hybrid": hybrid}

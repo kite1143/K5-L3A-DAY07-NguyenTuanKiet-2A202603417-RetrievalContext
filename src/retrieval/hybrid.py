@@ -33,13 +33,12 @@ def rrf_fuse(rankings: list[list[dict]], *, k: int = DEFAULT_RRF_K, top_k: int =
 class HybridRetriever:
     """Kết hợp dense và BM25 trong cùng một lần gọi, cùng filter."""
 
-    method = "hybrid"
-
-    def __init__(self, dense, lexical, *, depth: int = DEFAULT_DEPTH, k: int = DEFAULT_RRF_K) -> None:
+    def __init__(self, dense, lexical, *, depth: int = DEFAULT_DEPTH, k: int = DEFAULT_RRF_K, method: str = "hybrid") -> None:
         self.dense = dense
         self.lexical = lexical
         self.depth = depth
         self.k = k
+        self.method = method
 
     def search(self, query: str, *, top_k: int = 3, filters: dict | None = None) -> list[dict]:
         dense_hits = self.dense.search(query, top_k=self.depth, filters=filters)

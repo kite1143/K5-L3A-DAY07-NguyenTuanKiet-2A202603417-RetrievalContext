@@ -16,8 +16,10 @@ from .tools import ToolError
 ABSTAIN_TEXT = "Không đủ bằng chứng trong tài liệu để trả lời câu hỏi này."
 
 
-def _context_from_candidates(candidates: list[dict], budget: int) -> tuple[str, list[str]]:
-    return pack_context(candidates, budget=budget)
+def _context_from_candidates(
+    candidates: list[dict], budget: int, query: str | None, block_cap: int | None
+) -> tuple[str, list[str]]:
+    return pack_context(candidates, budget=budget, query=query, block_cap=block_cap)
 
 
 def run_agent(
@@ -30,6 +32,7 @@ def run_agent(
     max_steps: int = 6,
     top_k: int = 5,
     context_budget: int = DEFAULT_BUDGET,
+    context_block_cap: int | None = None,
     query_id: str | None = None,
 ) -> dict[str, Any]:
     if not isinstance(question, str) or not question.strip():
@@ -103,7 +106,10 @@ def run_agent(
                 if hit["id"] not in seen:
                     seen.add(hit["id"])
                     candidates.append(hit)
-            context, context_ids = _context_from_candidates(candidates, context_budget)
+            search_log = " ".join(entry["query"] for entry in history if entry.get("query"))
+            context, context_ids = _context_from_candidates(
+                candidates, context_budget, search_log or question, context_block_cap
+            )
             entry = {
                 "tool": tool,
                 "query": query,

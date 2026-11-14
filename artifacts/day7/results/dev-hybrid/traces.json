@@ -47,7 +47,7 @@
     "context_chars": 3261,
     "context_budget": 4000,
     "context_hit": true,
-    "elapsed_ms": 16.576499998336658
+    "elapsed_ms": 40.76659999554977
   },
   {
     "query_id": "q02",
@@ -97,7 +97,7 @@
     "context_chars": 3182,
     "context_budget": 4000,
     "context_hit": true,
-    "elapsed_ms": 20.846600004006177
+    "elapsed_ms": 25.436600000830367
   },
   {
     "query_id": "q03",
@@ -148,7 +148,7 @@
     "context_chars": 3595,
     "context_budget": 4000,
     "context_hit": false,
-    "elapsed_ms": 13.987200014526024
+    "elapsed_ms": 18.13009998295456
   },
   {
     "query_id": "q05",
@@ -198,7 +198,7 @@
     "context_chars": 3250,
     "context_budget": 4000,
     "context_hit": false,
-    "elapsed_ms": 18.971200013766065
+    "elapsed_ms": 25.89089999673888
   },
   {
     "query_id": "q06",
@@ -248,7 +248,7 @@
     "context_chars": 3758,
     "context_budget": 4000,
     "context_hit": true,
-    "elapsed_ms": 16.886199999134988
+    "elapsed_ms": 20.482799998717383
   },
   {
     "query_id": "q08",
@@ -298,7 +298,7 @@
     "context_chars": 3957,
     "context_budget": 4000,
     "context_hit": false,
-    "elapsed_ms": 35.18810000969097
+    "elapsed_ms": 20.85080000688322
   },
   {
     "query_id": "q09",
@@ -350,7 +350,7 @@
     "context_chars": 3564,
     "context_budget": 4000,
     "context_hit": true,
-    "elapsed_ms": 34.76979999686591
+    "elapsed_ms": 21.383300016168505
   },
   {
     "query_id": "q11",
@@ -400,7 +400,7 @@
     "context_chars": 3756,
     "context_budget": 4000,
     "context_hit": true,
-    "elapsed_ms": 33.93740000319667
+    "elapsed_ms": 20.52479999838397
   },
   {
     "query_id": "q12",
@@ -449,7 +449,7 @@
     "context_chars": 2450,
     "context_budget": 4000,
     "context_hit": true,
-    "elapsed_ms": 32.10739998030476
+    "elapsed_ms": 19.917599973268807
   },
   {
     "query_id": "q13",
@@ -500,7 +500,7 @@
     "context_chars": 2450,
     "context_budget": 4000,
     "context_hit": true,
-    "elapsed_ms": 32.378100004279986
+    "elapsed_ms": 18.064300005789846
   },
   {
     "query_id": "q15",
@@ -550,7 +550,7 @@
     "context_chars": 3428,
     "context_budget": 4000,
     "context_hit": false,
-    "elapsed_ms": 28.379700001096353
+    "elapsed_ms": 13.441700022667646
   },
   {
     "query_id": "q16",
@@ -600,7 +600,7 @@
     "context_chars": 3601,
     "context_budget": 4000,
     "context_hit": true,
-    "elapsed_ms": 35.75229999842122
+    "elapsed_ms": 18.171500007156283
   },
   {
     "query_id": "q17",
@@ -650,7 +650,7 @@
     "context_chars": 3601,
     "context_budget": 4000,
     "context_hit": false,
-    "elapsed_ms": 33.36890001082793
+    "elapsed_ms": 19.037800026126206
   },
   {
     "query_id": "q19",
@@ -699,7 +699,7 @@
     "context_chars": 3595,
     "context_budget": 4000,
     "context_hit": false,
-    "elapsed_ms": 34.60300000733696
+    "elapsed_ms": 18.934199993964285
   },
   {
     "query_id": "q20",
@@ -749,6 +749,6 @@
     "context_chars": 3951,
     "context_budget": 4000,
     "context_hit": true,
-    "elapsed_ms": 30.496899998979643
+    "elapsed_ms": 17.963399994187057
   }
 ]

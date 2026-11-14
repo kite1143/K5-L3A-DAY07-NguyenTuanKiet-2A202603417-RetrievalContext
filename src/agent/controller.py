@@ -102,19 +102,45 @@ def parse_action(text: str) -> dict:
 class LLMController:
     """Bọc một ChatModel (provider thật) thành Controller.decide."""
 
-    def __init__(self, model, *, temperature: float = 0.0, max_tokens: int = 900) -> None:
+    def __init__(self, model, *, temperature: float = 0.0, max_tokens: int = 900, repair_attempts: int = 1) -> None:
         self.model = model
         self.temperature = temperature
         self.max_tokens = max_tokens
+        self.repair_attempts = repair_attempts
         self.prompt_version = PROMPT_VERSION
 
     def decide(self, question: str, history: list[dict], *, filters: dict | None = None) -> ControllerResult:
         messages = build_messages(question, history, filters=filters)
         response = self.model.chat(messages, temperature=self.temperature, max_tokens=self.max_tokens)
-        action = parse_action(response["text"])
-        return ControllerResult(
-            action=action,
-            usage=response.get("usage") or {},
-            latency_ms=response.get("latency_ms") or 0.0,
-            raw_text=response["text"],
-        )
+        usage = dict(response.get("usage") or {})
+        latency = float(response.get("latency_ms") or 0.0)
+        raw = response["text"]
+        attempts = 0
+        while True:
+            try:
+                action = parse_action(raw)
+                break
+            except ControllerError as exc:
+                if attempts >= self.repair_attempts:
+                    raise
+                attempts += 1
+                repair_messages = messages + [
+                    {"role": "assistant", "content": raw},
+                    {
+                        "role": "user",
+                        "content": (
+                            "That reply was not a valid JSON action: "
+                            f"{exc}. Reply again with exactly ONE JSON object "
+                            'using action "search", "answer" or "abstain", and nothing else.'
+                        ),
+                    },
+                ]
+                repaired = self.model.chat(
+                    repair_messages, temperature=self.temperature, max_tokens=self.max_tokens
+                )
+                for key, value in (repaired.get("usage") or {}).items():
+                    if isinstance(value, int):
+                        usage[key] = int(usage.get(key) or 0) + value
+                latency += float(repaired.get("latency_ms") or 0.0)
+                raw = repaired["text"]
+        return ControllerResult(action=action, usage=usage, latency_ms=latency, raw_text=raw)

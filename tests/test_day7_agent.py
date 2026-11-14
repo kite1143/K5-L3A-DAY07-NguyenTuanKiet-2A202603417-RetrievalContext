@@ -54,6 +54,45 @@ class ParseTests(unittest.TestCase):
             parse_action('{"action": "search"}')
 
 
+class RepairTests(unittest.TestCase):
+    def test_broken_json_is_repaired_once(self):
+        from agent.controller import LLMController
+
+        class FlakyModel:
+            provider = "fake"
+            model = "fake"
+
+            def __init__(self):
+                self.calls = 0
+
+            def chat(self, messages, *, temperature=0.0, max_tokens=900):
+                self.calls += 1
+                if self.calls == 1:
+                    return {"text": '{"action": "search", "query": "x")', "usage": {"prompt_tokens": 10}}
+                return {"text": '{"action": "abstain", "reason": "none"}', "usage": {"prompt_tokens": 5}}
+
+        model = FlakyModel()
+        controller = LLMController(model, repair_attempts=1)
+        result = controller.decide("Q?", [])
+        self.assertEqual(result.action["action"], "abstain")
+        self.assertEqual(model.calls, 2)
+        self.assertEqual(result.usage["prompt_tokens"], 15)
+
+    def test_repair_gives_up_after_limit(self):
+        from agent.controller import LLMController
+
+        class BadModel:
+            provider = "fake"
+            model = "fake"
+
+            def chat(self, messages, *, temperature=0.0, max_tokens=900):
+                return {"text": "not json at all", "usage": {}}
+
+        controller = LLMController(BadModel(), repair_attempts=0)
+        with self.assertRaises(ControllerError):
+            controller.decide("Q?", [])
+
+
 class LoopTests(unittest.TestCase):
     def test_answer_with_valid_citation(self):
         controller = ScriptedController(

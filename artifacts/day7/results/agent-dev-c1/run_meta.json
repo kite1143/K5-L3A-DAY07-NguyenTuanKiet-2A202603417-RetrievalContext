@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T08:51:45+00:00",
+  "generated_at": "2026-11-14T09:07:12+00:00",
   "benchmark_result": true,
   "split": "dev",
   "model": "gpt-4o-mini",
@@ -10,8 +10,10 @@
     "max_steps": 5,
     "top_k": 5,
     "context_budget": 4000,
+    "context_block_cap": null,
     "temperature": 0.0,
     "max_tokens": 900,
+    "dense_profile": "day6",
     "tools": [
       "dense_search",
       "lexical_search",
@@ -20,14 +22,14 @@
   },
   "cases": 17,
   "status_counts": {
-    "answered": 13,
-    "abstain": 4
+    "answered": 12,
+    "abstain": 5
   },
   "usage": {
-    "prompt_tokens": 26479,
-    "completion_tokens": 2374
+    "prompt_tokens": 28989,
+    "completion_tokens": 2320
   },
   "cost_usd": 0.0,
   "cost_note": "Điền chi phí theo bảng giá provider; token ở trên là số đo thực tế.",
-  "elapsed_seconds": 69.5
+  "elapsed_seconds": 74.0
 }

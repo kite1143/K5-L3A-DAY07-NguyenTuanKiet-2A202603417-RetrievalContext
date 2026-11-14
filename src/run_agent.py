@@ -26,7 +26,7 @@ from config import load_env
 from agent.providers import ProviderError, model_from_env
 from agent.scripted import ScriptedController
 from agent.tools import RetrievalTools
-from retrieval.registry import METHODS, build_retriever
+from retrieval.registry import METHODS, build_bundle
 
 ROOT = Path(__file__).resolve().parents[1]
 QUESTIONS = ROOT / "data" / "day6" / "questions.json"
@@ -50,6 +50,10 @@ def main() -> None:
     parser.add_argument("--max-steps", type=int, default=5)
     parser.add_argument("--top-k", type=int, default=5)
     parser.add_argument("--context-budget", type=int, default=4000)
+    parser.add_argument("--context-block-cap", type=int, default=0,
+                        help="0 = block nguyên vẹn; >0 = trích cửa sổ câu quanh query cho mỗi block")
+    parser.add_argument("--dense-profile", choices=("unit", "day6"), default="unit",
+                        help="nhánh dense: unit (index Day 7) hoặc day6 (paragraph Day 6 gộp về unit)")
     parser.add_argument("--temperature", type=float, default=0.0)
     parser.add_argument("--max-tokens", type=int, default=900)
     parser.add_argument("--scripted-demo", action="store_true", help="CHỈ kiểm tra đường ống, không phải kết quả")
@@ -64,11 +68,8 @@ def main() -> None:
     if not cases:
         raise SystemExit("không có câu nào để chạy")
 
-    retrievers = {name: build_retriever(name) for name in ("dense", "bm25", "hybrid")}
+    retrievers = build_bundle(args.dense_profile)
     tools = RetrievalTools(retrievers, top_k=args.top_k)
-    for name in retrievers:
-        if name not in set(METHODS):
-            raise SystemExit(f"retriever lạ: {name}")
 
     if args.scripted_demo:
         controller = ScriptedController(
@@ -105,6 +106,7 @@ def main() -> None:
             max_steps=args.max_steps,
             top_k=args.top_k,
             context_budget=args.context_budget,
+            context_block_cap=args.context_block_cap or None,
             query_id=case["id"],
         )
         traces.append(result)
@@ -145,8 +147,10 @@ def main() -> None:
             "max_steps": args.max_steps,
             "top_k": args.top_k,
             "context_budget": args.context_budget,
+            "context_block_cap": args.context_block_cap or None,
             "temperature": args.temperature,
             "max_tokens": args.max_tokens,
+            "dense_profile": args.dense_profile,
             "tools": tools.names,
         },
         "cases": len(cases),

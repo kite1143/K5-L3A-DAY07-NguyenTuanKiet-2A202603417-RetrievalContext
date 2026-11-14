@@ -1,0 +1,131 @@
+[
+  {
+    "query_id": "q01",
+    "citation_support": [
+      true
+    ],
+    "answer_grade": 2,
+    "note": "chấm tay, xem artifacts/day7/reviews/dev-b0.md"
+  },
+  {
+    "query_id": "q02",
+    "citation_support": [
+      true,
+      true
+    ],
+    "answer_grade": 2,
+    "note": "chấm tay, xem artifacts/day7/reviews/dev-b0.md"
+  },
+  {
+    "query_id": "q03",
+    "citation_support": [
+      true
+    ],
+    "answer_grade": 2,
+    "note": "chấm tay, xem artifacts/day7/reviews/dev-b0.md"
+  },
+  {
+    "query_id": "q05",
+    "citation_support": [
+      false,
+      false
+    ],
+    "answer_grade": 1,
+    "note": "chấm tay, xem artifacts/day7/reviews/dev-b0.md"
+  },
+  {
+    "query_id": "q06",
+    "citation_support": [
+      true,
+      true
+    ],
+    "answer_grade": 2,
+    "note": "chấm tay, xem artifacts/day7/reviews/dev-b0.md"
+  },
+  {
+    "query_id": "q08",
+    "citation_support": [
+      false,
+      true
+    ],
+    "answer_grade": 2,
+    "note": "chấm tay, xem artifacts/day7/reviews/dev-b0.md"
+  },
+  {
+    "query_id": "q09",
+    "citation_support": [
+      true
+    ],
+    "answer_grade": 2,
+    "note": "chấm tay, xem artifacts/day7/reviews/dev-b0.md"
+  },
+  {
+    "query_id": "q11",
+    "citation_support": [],
+    "answer_grade": 0,
+    "note": "câu có đáp án bị từ chối -> chấm 0"
+  },
+  {
+    "query_id": "q12",
+    "citation_support": [
+      true
+    ],
+    "answer_grade": 2,
+    "note": "chấm tay, xem artifacts/day7/reviews/dev-b0.md"
+  },
+  {
+    "query_id": "q13",
+    "citation_support": [],
+    "answer_grade": 0,
+    "note": "câu có đáp án bị từ chối -> chấm 0"
+  },
+  {
+    "query_id": "q15",
+    "citation_support": [
+      true
+    ],
+    "answer_grade": 2,
+    "note": "chấm tay, xem artifacts/day7/reviews/dev-b0.md"
+  },
+  {
+    "query_id": "q16",
+    "citation_support": [
+      true
+    ],
+    "answer_grade": 2,
+    "note": "chấm tay, xem artifacts/day7/reviews/dev-b0.md"
+  },
+  {
+    "query_id": "q17",
+    "citation_support": [],
+    "answer_grade": 0,
+    "note": "câu có đáp án bị từ chối -> chấm 0"
+  },
+  {
+    "query_id": "q19",
+    "citation_support": [],
+    "answer_grade": 0,
+    "note": "câu có đáp án bị từ chối -> chấm 0"
+  },
+  {
+    "query_id": "q20",
+    "citation_support": [
+      true,
+      false
+    ],
+    "answer_grade": 2,
+    "note": "chấm tay, xem artifacts/day7/reviews/dev-b0.md"
+  },
+  {
+    "query_id": "a01",
+    "citation_support": [],
+    "abstention_correct": true,
+    "note": "chấm tay, xem artifacts/day7/reviews/dev-b0.md"
+  },
+  {
+    "query_id": "a02",
+    "citation_support": [],
+    "abstention_correct": true,
+    "note": "chấm tay, xem artifacts/day7/reviews/dev-b0.md"
+  }
+]

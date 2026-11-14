@@ -8,7 +8,7 @@
   "context_hit": 9,
   "context_hit_rate": 0.6,
   "avg_context_chars": 3426.6,
-  "median_ms": 32.107,
+  "median_ms": 19.918,
   "context_budget": 4000,
   "top_k": 3,
   "filter_subset": {

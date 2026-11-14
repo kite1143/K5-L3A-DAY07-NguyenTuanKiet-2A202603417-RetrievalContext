@@ -1,0 +1,19 @@
+{
+  "method": "hybrid_day6",
+  "n": 15,
+  "hit1": 9,
+  "hit3": 12,
+  "hit1_rate": 0.6,
+  "hit3_rate": 0.8,
+  "context_hit": 8,
+  "context_hit_rate": 0.5333,
+  "avg_context_chars": 3293.7,
+  "median_ms": 37.288,
+  "context_budget": 4000,
+  "top_k": 3,
+  "filter_subset": {
+    "n": 3,
+    "hit1": 1,
+    "hit3": 2
+  }
+}

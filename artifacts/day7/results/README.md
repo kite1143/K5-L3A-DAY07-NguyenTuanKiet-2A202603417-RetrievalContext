@@ -23,3 +23,13 @@ Bảng dev 15 câu:
 | hybrid | 8/15 | 12/15 | 9/15 | 32,1 |
 
 Chưa chạy test: test chỉ chạy sau khi chốt cấu hình trên dev.
+## Bước 5 — bốn cấu hình agent trên dev
+
+| Thư mục | Cấu hình | Grounded TB | Từ chối nhầm | Token | Chi phí |
+|---|---|---:|---:|---|---:|
+| `agent-dev-b0/` | hybrid unit, 2 lượt, budget 4.000 | 1,40 | 4/15 | 28.889 | 0,0054 USD |
+| `agent-dev-c1/` | hybrid_day6, 2 lượt, budget 4.000 | 1,47 | 3/15 | 31.309 | 0,0057 USD |
+| `agent-dev-c2/` | **hybrid unit, 3 lượt, budget 6.000 (đã chọn)** | **1,73** | **1/15** | 42.936 | 0,0077 USD |
+| `agent-dev-c3/` | như C2 + block cap 1.400 | 1,53 | 2/15 | 34.818 | 0,0064 USD |
+
+Mỗi thư mục có `traces.json`, `cases.json`, `run_meta.json`, `agent_metrics.json`. Nhãn chấm tay ở `artifacts/day7/reviews/` (`dev-<mã>.md` là bảng chấm, `<mã>-reviews.json` là nhãn dùng cho agent_metrics).
