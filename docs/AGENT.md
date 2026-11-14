@@ -14,6 +14,7 @@ run_agent.py
 - Model thật qua HTTP: nhánh `openai` (mọi endpoint /chat/completions: OpenAI, OpenRouter, DeepSeek, vLLM, LM Studio) và `ollama`. Không có fallback giả: thiếu key/model thì chương trình dừng với thông điệp rõ ràng.
 - Ba tool: `dense_search`, `lexical_search`, `hybrid_search`. Model chọn tool và query; **filter do harness cấp từ câu hỏi**, model không tự suy ra nên không thể lách gold.
 - Action hợp lệ duy nhất: `search` / `answer` / `abstain`. Mọi output khác bị `parse_action` từ chối và ghi thành lỗi.
+- Nếu model trả JSON hỏng, controller thử **repair một lần** (gửi lại kèm thông điệp sửa); vẫn hỏng thì `status='error'`. Lý do: một ca dev trả `{"action": "search", ... )` thiếu ngoặc và bị tính là lỗi provider, trong khi đó là lỗi định dạng của model.
 
 ## 2. Chống rò rỉ và grounding
 
