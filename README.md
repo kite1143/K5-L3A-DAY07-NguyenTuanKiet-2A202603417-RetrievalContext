@@ -6,6 +6,15 @@ Dùng embedding và vector store từ Day 6 để xây một agent biết tìm b
 
 > **Tùy chọn:** [Gợi ý dùng AI để lập trình](AGENT_SETUP.md) giúp bạn làm lab; phần này không bắt buộc và không tính điểm.
 
+## Bài đã nộp — 2A202603417 Nguyễn Tuấn Kiệt
+
+- **Báo cáo cá nhân:** [report/individual/2A202603417_NguyenTuanKiet.md](report/individual/2A202603417_NguyenTuanKiet.md)
+- **Kết quả nhanh:** 5 phương pháp retrieval trên dev (BM25 10/15 Hit@1; hybrid 12/15 Evidence Hit@3); agent chốt `C2` đạt grounded **1,73/2** trên dev và **1,40/2** trên test, từ chối đúng **2/2** câu thiếu bằng chứng.
+- **Cách chạy:** [src/README.md](src/README.md) · **Môi trường & tái tạo:** [docs/ENVIRONMENT.md](docs/ENVIRONMENT.md)
+- **Dữ liệu, benchmark đóng băng:** [data/day6/manifest.json](data/day6/manifest.json) · [docs/BENCHMARK_DAY7.md](docs/BENCHMARK_DAY7.md)
+- **Quy trình chọn cấu hình:** [giao thức ghi trước](docs/STEP5_PROTOCOL.md) → [dev](docs/STEP5_RESULTS.md) → [test](docs/STEP6_RESULTS.md)
+- **Giới hạn đã biết:** 3/5 câu test có evidence không nằm trong context; phân tích đầy đủ ở mục *Agent và đánh giá* trong báo cáo.
+
 ## Bài cần làm
 
 ![Agent tìm tài liệu trong kho Day 6 và trả lời có nguồn](assets/retrieval-pipeline.svg)

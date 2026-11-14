@@ -1,0 +1,61 @@
+{
+  "model": "gpt-4o-mini",
+  "price_usd_per_1m_tokens": {
+    "input": 0.15,
+    "output": 0.6
+  },
+  "prompt_tokens": 14338,
+  "completion_tokens": 966,
+  "total_usd": 0.00273,
+  "per_query": [
+    {
+      "query_id": "q04",
+      "prompt_tokens": 1822,
+      "completion_tokens": 197,
+      "cost_usd": 0.000391,
+      "latency_ms": 5849.66
+    },
+    {
+      "query_id": "q07",
+      "prompt_tokens": 3249,
+      "completion_tokens": 187,
+      "cost_usd": 0.0006,
+      "latency_ms": 5818.92
+    },
+    {
+      "query_id": "q10",
+      "prompt_tokens": 1862,
+      "completion_tokens": 144,
+      "cost_usd": 0.000366,
+      "latency_ms": 4224.17
+    },
+    {
+      "query_id": "q14",
+      "prompt_tokens": 1871,
+      "completion_tokens": 58,
+      "cost_usd": 0.000315,
+      "latency_ms": 3388.21
+    },
+    {
+      "query_id": "q18",
+      "prompt_tokens": 1791,
+      "completion_tokens": 256,
+      "cost_usd": 0.000422,
+      "latency_ms": 6095.92
+    },
+    {
+      "query_id": "a03",
+      "prompt_tokens": 1883,
+      "completion_tokens": 63,
+      "cost_usd": 0.00032,
+      "latency_ms": 2640.49
+    },
+    {
+      "query_id": "a04",
+      "prompt_tokens": 1860,
+      "completion_tokens": 61,
+      "cost_usd": 0.000316,
+      "latency_ms": 2300.17
+    }
+  ]
+}

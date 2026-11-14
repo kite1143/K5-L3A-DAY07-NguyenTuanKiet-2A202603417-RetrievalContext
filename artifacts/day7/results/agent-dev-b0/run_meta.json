@@ -28,7 +28,15 @@
     "prompt_tokens": 26428,
     "completion_tokens": 2461
   },
-  "cost_usd": 0.0,
-  "cost_note": "Điền chi phí theo bảng giá provider; token ở trên là số đo thực tế.",
-  "elapsed_seconds": 78.19
+  "cost_usd": 0.005441,
+  "cost_note": "Tính từ token thực tế trong traces.json; chi tiết từng câu ở costs.json.",
+  "elapsed_seconds": 78.19,
+  "cost_model": {
+    "model": "gpt-4o-mini",
+    "price_usd_per_1m_tokens": {
+      "input": 0.15,
+      "output": 0.6
+    },
+    "computed_by": "src/annotate_costs.py"
+  }
 }
